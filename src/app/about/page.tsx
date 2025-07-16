@@ -96,18 +96,18 @@ const AboutPage = () => {
               <p className="text-lg text-gray-600 mb-6">
                 AI4ALL Armenia was born from a vision to democratize AI education across Armenia. 
                 Through the strategic collaboration between the Enterprise Incubator Foundation (EIF), 
-                USAID's "Armenia Workforce Development Activity," and the global AI4ALL movement, 
-                we're creating unprecedented opportunities for Armenian youth and educators.
+                USAID&apos;s &quot;Armenia Workforce Development Activity,&quot; and the global AI4ALL movement, 
+                we&apos;re creating unprecedented opportunities for Armenian youth and educators.
               </p>
               <p className="text-lg text-gray-600 mb-6">
-                Launched in November 2024, our initiative recognizes that Armenia's rapidly evolving 
-                tech landscape demands AI literacy. We're not just teaching technology—we're fostering 
+                Launched in November 2024, our initiative recognizes that Armenia&apos;s rapidly evolving 
+                tech landscape demands AI literacy. We&apos;re not just teaching technology—we&apos;re fostering 
                 a human-centered, ethical approach to AI that positions Armenia as a regional leader 
                 in responsible innovation.
               </p>
               <p className="text-lg text-gray-600">
                 Our commitment extends beyond urban centers to reach every region of Armenia, 
-                ensuring that geography doesn't determine access to world-class AI education. 
+                ensuring that geography doesn&apos;t determine access to world-class AI education. 
                 We believe that the future of Armenia depends on empowering its people with 
                 the skills and knowledge to thrive in an AI-driven world.
               </p>
@@ -131,7 +131,7 @@ const AboutPage = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Vision</h3>
                   <p className="text-gray-600">
                     To cultivate a new generation of AI changemakers in Armenia, promoting diversity, 
-                    ethical innovation, and contributing to the nation's digital transformation.
+                    ethical innovation, and contributing to the nation&apos;s digital transformation.
                   </p>
                 </div>
               </div>
@@ -153,8 +153,8 @@ const AboutPage = () => {
               Our Goals
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We're working towards specific, measurable objectives that will transform 
-              Armenia's AI education landscape.
+              We&apos;re working towards specific, measurable objectives that will transform 
+              Armenia&apos;s AI education landscape.
             </p>
           </motion.div>
 
@@ -277,11 +277,11 @@ const AboutPage = () => {
               </p>
               <p className="text-gray-600 mb-4">
                 By partnering with the global AI4ALL organization, we bring world-class AI education 
-                methodologies to Armenia while ensuring they're adapted to local needs and contexts.
+                methodologies to Armenia while ensuring they&apos;re adapted to local needs and contexts.
               </p>
               <p className="text-gray-600">
                 This strategic alignment ensures that our AI education efforts contribute directly 
-                to Armenia's economic development goals and regional competitiveness in the 
+                to Armenia&apos;s economic development goals and regional competitiveness in the 
                 technology sector.
               </p>
             </motion.div>

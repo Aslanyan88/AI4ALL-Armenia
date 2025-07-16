@@ -174,7 +174,7 @@ const ContactPage = () => {
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
               <p className="text-gray-600 mb-8">
-                Have a question or want to learn more about AI4ALL Armenia? We'd love to hear from you.
+                Have a question or want to learn more about AI4ALL Armenia? We&apos;d love to hear from you.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
@@ -361,7 +361,7 @@ const ContactPage = () => {
             >
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Partnership Opportunities</h2>
               <p className="text-gray-600 mb-6">
-                We're always looking for organizations that share our vision of democratizing 
+                We&apos;re always looking for organizations that share our vision of democratizing 
                 AI education in Armenia. Partner with us to expand our impact.
               </p>
               <ul className="space-y-3 text-gray-600">

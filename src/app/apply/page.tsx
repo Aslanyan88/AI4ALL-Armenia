@@ -342,7 +342,7 @@ const ApplyPage = () => {
                   <span className="text-white font-bold">1</span>
                 </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">Application Review</h3>
-                <p className="text-gray-600">We'll review your application within 3 business days.</p>
+                <p className="text-gray-600">We&apos;ll review your application within 3 business days.</p>
               </div>
               <div className="text-center">
                 <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-4">

@@ -244,7 +244,7 @@ const TeamPage = () => {
               Join Our Mission
             </h2>
             <p className="text-xl mb-8 text-gray-100">
-              Are you passionate about AI education and want to make a difference in Armenia? We're always looking for talented individuals to join our team.
+              Are you passionate about AI education and want to make a difference in Armenia? We&apos;re always looking for talented individuals to join our team.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

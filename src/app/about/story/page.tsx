@@ -194,7 +194,7 @@ const StoryPage = () => {
               Our Journey
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Follow our progress from conception to becoming Armenia's leading AI education initiative.
+              Follow our progress from conception to becoming Armenia&apos;s leading AI education initiative.
             </p>
           </motion.div>
 
@@ -245,7 +245,7 @@ const StoryPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Challenges We've Overcome
+              Challenges We&apos;ve Overcome
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Every challenge was an opportunity to innovate and improve our approach to AI education.

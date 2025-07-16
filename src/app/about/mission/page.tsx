@@ -89,7 +89,7 @@ const MissionPage = () => {
               What We Stand For
             </h2>
             <p className="text-xl text-gray-600 max-w-4xl mx-auto">
-              AI4ALL Armenia is more than an educational initiative—it's a movement to transform how Armenia approaches artificial intelligence. We believe that AI education should be accessible, ethical, and empowering for all.
+              AI4ALL Armenia is more than an educational initiative—it&apos;s a movement to transform how Armenia approaches artificial intelligence. We believe that AI education should be accessible, ethical, and empowering for all.
             </p>
           </motion.div>
 

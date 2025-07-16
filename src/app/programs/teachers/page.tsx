@@ -567,7 +567,7 @@ const TeacherProgramsPage = () => {
                     <div className="text-xs text-slate-500">{testimonial.subject} • {testimonial.location}</div>
                   </div>
                 </div>
-                <p className="text-slate-700 mb-4 italic">"{testimonial.quote}"</p>
+                <p className="text-slate-700 mb-4 italic">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-emerald-500" />
                   <span className="text-sm font-medium text-emerald-700">{testimonial.achievement}</span>

@@ -99,7 +99,7 @@ const HomePage = () => {
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
                 <span className="block text-white">AI4ALL Armenia:</span>
                 <span className="block bg-gradient-to-r from-blue-200 via-cyan-200 to-teal-200 bg-clip-text text-transparent">
-                  Empowering Our Nation's Future
+                  Empowering Our Nation&apos;s Future
                 </span>
                 <span className="block text-3xl md:text-4xl mt-2 text-blue-100">
                   with AI
@@ -196,7 +196,7 @@ const HomePage = () => {
               Why AI4ALL Armenia?
             </h2>
             <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Armenia's tech landscape is rapidly evolving, and AI literacy is crucial for future readiness. 
+              Armenia&apos;s tech landscape is rapidly evolving, and AI literacy is crucial for future readiness. 
               Our program bridges skills gaps, fosters innovation, and promotes ethical AI development 
               across all regions of Armenia.
             </p>
@@ -360,7 +360,7 @@ const HomePage = () => {
                   </div>
                 </div>
                 <blockquote className="text-slate-700 text-lg mb-6 italic leading-relaxed">
-                  "{testimonial.quote}"
+                  &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="flex items-center justify-between">
                   <div className="flex items-center">

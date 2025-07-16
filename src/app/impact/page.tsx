@@ -142,7 +142,7 @@ const ImpactPage = () => {
               Our Impact
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Transforming lives, communities, and Armenia's future through AI education.
+              Transforming lives, communities, and Armenia&apos;s future through AI education.
             </p>
           </motion.div>
         </div>
@@ -158,7 +158,7 @@ const ImpactPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Transforming Armenia's AI Landscape
+              Transforming Armenia&apos;s AI Landscape
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Since our launch in November 2024, AI4ALL Armenia has made a significant impact 
@@ -240,7 +240,7 @@ const ImpactPage = () => {
                     </span>
                   </div>
                   <blockquote className="text-xl text-gray-700 font-medium mb-6">
-                    "{story.quote}"
+                    &quot;{story.quote}&quot;
                   </blockquote>
                   <p className="text-gray-600 mb-6">{story.fullStory}</p>
                   <div className="space-y-3">

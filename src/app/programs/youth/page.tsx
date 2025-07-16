@@ -501,7 +501,7 @@ const YouthProgramsPage = () => {
                     <div className="text-sm text-gray-600">Age {testimonial.age}, {testimonial.location}</div>
                   </div>
                 </div>
-                <p className="text-gray-600 mb-4 italic">"{testimonial.quote}"</p>
+                <p className="text-gray-600 mb-4 italic">&quot;{testimonial.quote}&quot;</p>
                 <div className="flex items-center gap-2">
                   <Award className="w-4 h-4 text-green-500" />
                   <span className="text-sm font-medium text-green-700">{testimonial.achievement}</span>
