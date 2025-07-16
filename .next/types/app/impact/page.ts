@@ -1,4 +1,4 @@
-// File: C:\Users\aslan\Desktop\AI4ALL Armenia\src\app\impact\page.tsx
+// File: C:\Users\aslan\Desktop\AI4ALL-Armenia\src\app\impact\page.tsx
 import * as entry from '../../../../src/app/impact/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

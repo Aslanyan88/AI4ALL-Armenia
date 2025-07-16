@@ -26,7 +26,6 @@ const NewsEventsPage = () => {
       excerpt: 'AI4ALL Armenia officially launches its comprehensive AI education program, bringing cutting-edge artificial intelligence training to youth and teachers across all regions of Armenia.',
       image: '/news/AI4ALL Armenia Launches Nationwide Initiative.png',
       author: 'EIF Communications',
-      readTime: '5 min read',
       featured: true,
     },
     {
@@ -38,7 +37,6 @@ const NewsEventsPage = () => {
       excerpt: 'Karine Mayilyan shares her transformative experience with ChatGPT and AI tools in education, highlighting the importance of adaptation in the digital age.',
       image: '/news/EIF\'s AI4ALL Initiative and Teachers Adapt.png',
       author: 'Karine Mayilyan',
-      readTime: '7 min read',
       featured: true,
     },
     {
@@ -50,7 +48,6 @@ const NewsEventsPage = () => {
       excerpt: 'A comprehensive look at how AI is transforming both educational methodologies and workplace dynamics, with insights from AI4ALL Armenia participants.',
       image: '/news/How Artificial Intelligence is Changing Education.png',
       author: 'AI4ALL Armenia Team',
-      readTime: '10 min read',
       featured: false,
     },
     {
@@ -62,7 +59,6 @@ const NewsEventsPage = () => {
       excerpt: 'Major AI infrastructure investment signals growing confidence in Armenia\'s tech ecosystem, creating new opportunities for AI4ALL Armenia graduates.',
       image: '/news/U.S. Company Plans 100MW AI Data Center in Armenia.png',
       author: 'Tech Armenia',
-      readTime: '4 min read',
       featured: false,
     },
     {
@@ -74,7 +70,6 @@ const NewsEventsPage = () => {
       excerpt: 'The global AI4ALL organization receives major funding to expand AI education initiatives, including support for programs like AI4ALL Armenia.',
       image: '/news/AI4ALL Global Announces $2M Google.org.png',
       author: 'AI4ALL Global',
-      readTime: '6 min read',
       featured: false,
     },
     {
@@ -248,8 +243,9 @@ const NewsEventsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                style={{ height: '600px' }}
               >
-                <div className="h-48 bg-gray-200 relative overflow-hidden">
+                <div className="h-56 bg-gray-200 relative overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -257,31 +253,32 @@ const NewsEventsPage = () => {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 h-[calc(600px-14rem)] flex flex-col">
                   <div className="flex items-center mb-4">
                     <span className="bg-primary-100 text-primary-600 px-3 py-1 rounded-full text-sm font-medium">
                       {item.category}
                     </span>
                     <span className="text-gray-500 text-sm ml-4">{formatDate(item.date)}</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-                  <p className="text-gray-600 mb-4">{item.excerpt}</p>
-                  <div className="flex items-center justify-between">
+                  
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2" style={{ height: '4rem' }}>
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 mb-6 line-clamp-4 flex-1" style={{ height: '6rem' }}>
+                    {item.excerpt}
+                  </p>
+                  
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
                     <div className="flex items-center text-sm text-gray-500">
-                      <span>{item.author}</span>
-                      {item.readTime && (
-                        <>
-                          <span className="mx-2">•</span>
-                          <span>{item.readTime}</span>
-                        </>
-                      )}
+                      <span className="truncate">{item.author}</span>
                     </div>
                     <Link
                       href={`/news/${item.id}`}
-                      className="text-primary-600 hover:text-primary-700 font-medium inline-flex items-center"
+                      className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md font-medium transition-colors inline-flex items-center flex-shrink-0"
                     >
                       Read More
-                      <ArrowRight className="w-4 h-4 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
                 </div>
@@ -395,8 +392,9 @@ const NewsEventsPage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.05 }}
                 className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow"
+                style={{ height: '500px' }}
               >
-                <div className="h-40 bg-gray-200 relative overflow-hidden">
+                <div className="h-48 bg-gray-200 relative overflow-hidden">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -404,8 +402,8 @@ const NewsEventsPage = () => {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
+                <div className="p-6 h-[calc(500px-12rem)] flex flex-col">
+                  <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       item.type === 'news' ? 'bg-blue-100 text-blue-600' :
                       item.type === 'event' ? 'bg-green-100 text-green-600' :
@@ -415,40 +413,44 @@ const NewsEventsPage = () => {
                     </span>
                     <span className="text-gray-500 text-sm">{formatDate(item.date)}</span>
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-3">{item.excerpt}</p>
+                  
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3 line-clamp-2" style={{ height: '3.5rem' }}>
+                    {item.title}
+                  </h3>
+                  
+                  <p className="text-gray-600 text-sm mb-4 line-clamp-3" style={{ height: '4.5rem' }}>
+                    {item.excerpt}
+                  </p>
                   
                   {item.type === 'event' && (
-                    <div className="mb-4 space-y-1">
+                    <div className="mb-4 space-y-2" style={{ height: '3rem' }}>
                       {item.time && (
                         <div className="flex items-center text-gray-600 text-sm">
-                          <Clock className="w-4 h-4 mr-1" />
-                          <span>{item.time}</span>
+                          <Clock className="w-4 h-4 mr-2 flex-shrink-0" />
+                          <span className="truncate">{item.time}</span>
                         </div>
                       )}
                       <div className="flex items-center text-gray-600 text-sm">
-                        <MapPin className="w-4 h-4 mr-1" />
-                        <span>{item.location}</span>
+                        <MapPin className="w-4 h-4 mr-2 flex-shrink-0" />
+                        <span className="truncate">{item.location}</span>
                       </div>
                     </div>
                   )}
                   
-                  <div className="flex items-center justify-between">
-                    <div className="text-sm text-gray-500">
+                  {item.type !== 'event' && (
+                    <div className="mb-4" style={{ height: '3rem' }}></div>
+                  )}
+                  
+                  <div className="flex items-center justify-between mt-auto pt-4 border-t border-gray-100">
+                    <div className="text-sm text-gray-500 flex-1 truncate">
                       {item.author && <span>{item.author}</span>}
-                      {item.readTime && (
-                        <>
-                          <span className="mx-2">•</span>
-                          <span>{item.readTime}</span>
-                        </>
-                      )}
                     </div>
                     <Link
                       href={item.registrationLink || `/news/${item.id}`}
-                      className="text-primary-600 hover:text-primary-700 font-medium text-sm inline-flex items-center"
+                      className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors inline-flex items-center flex-shrink-0"
                     >
                       {item.type === 'event' ? 'Register' : 'Read More'}
-                      <ArrowRight className="w-3 h-3 ml-1" />
+                      <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
                 </div>

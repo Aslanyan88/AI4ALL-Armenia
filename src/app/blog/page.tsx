@@ -17,7 +17,6 @@ const BlogPage = () => {
       author: 'Dr. Armen Sarkissian',
       date: '2025-07-10',
       category: 'education',
-      readTime: '5 min read',
       image: '/api/placeholder/400/250',
       featured: true
     },
@@ -28,7 +27,6 @@ const BlogPage = () => {
       author: 'Maria Hakobyan',
       date: '2025-07-08',
       category: 'success-stories',
-      readTime: '4 min read',
       image: '/api/placeholder/400/250',
       featured: false
     },
@@ -39,7 +37,6 @@ const BlogPage = () => {
       author: 'Tigran Abrahamyan',
       date: '2025-07-05',
       category: 'technical',
-      readTime: '7 min read',
       image: '/api/placeholder/400/250',
       featured: false
     },
@@ -50,7 +47,6 @@ const BlogPage = () => {
       author: 'AI4ALL Armenia Team',
       date: '2025-07-03',
       category: 'news',
-      readTime: '3 min read',
       image: '/api/placeholder/400/250',
       featured: true
     },
@@ -61,7 +57,6 @@ const BlogPage = () => {
       author: 'Sona Grigoryan',
       date: '2025-07-01',
       category: 'technical',
-      readTime: '10 min read',
       image: '/api/placeholder/400/250',
       featured: false
     },
@@ -72,7 +67,6 @@ const BlogPage = () => {
       author: 'Narek Hovhannisyan',
       date: '2025-06-28',
       category: 'success-stories',
-      readTime: '6 min read',
       image: '/api/placeholder/400/250',
       featured: false
     }
@@ -195,7 +189,6 @@ const BlogPage = () => {
                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(post.category)}`}>
                           {post.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                         </span>
-                        <span className="text-xs text-gray-500">{post.readTime}</span>
                       </div>
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">{post.title}</h3>
                       <p className="text-gray-600 mb-4">{post.excerpt}</p>
@@ -257,7 +250,6 @@ const BlogPage = () => {
                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${getCategoryColor(post.category)}`}>
                           {post.category.replace('-', ' ').replace(/\b\w/g, l => l.toUpperCase())}
                         </span>
-                        <span className="text-xs text-gray-500">{post.readTime}</span>
                       </div>
                       <h3 className="text-lg font-semibold text-gray-900 mb-2">{post.title}</h3>
                       <p className="text-gray-600 mb-4 text-sm">{post.excerpt}</p>
