@@ -21,8 +21,10 @@ import {
   MessageSquare,
   Globe
 } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const TeacherProgramsPage = () => {
+  const { t } = useLanguage()
   const [selectedProgram, setSelectedProgram] = useState<string | null>(null)
   const [selectedLevel, setSelectedLevel] = useState<string>('all')
   const [selectedDuration, setSelectedDuration] = useState<string>('all')
@@ -214,23 +216,23 @@ const TeacherProgramsPage = () => {
   const benefits = [
     {
       icon: Brain,
-      title: 'Enhanced Teaching Methods',
-      description: 'Learn innovative AI-powered teaching techniques that improve student engagement and learning outcomes.'
+      title: t('enhancedTeachingMethods'),
+      description: t('enhancedTeachingDescription')
     },
     {
       icon: Zap,
-      title: 'Increased Efficiency',
-      description: 'Automate routine tasks like grading and feedback, freeing up time for meaningful student interaction.'
+      title: t('increasedEfficiency'),
+      description: t('increasedEfficiencyDescription')
     },
     {
       icon: Target,
-      title: 'Personalized Learning',
-      description: 'Create customized learning experiences that adapt to each student\'s pace and learning style.'
+      title: t('personalizedLearning'),
+      description: t('personalizedLearningDescription')
     },
     {
       icon: Globe,
-      title: 'Future-Ready Skills',
-      description: 'Prepare students for an AI-driven world by integrating cutting-edge technology into your curriculum.'
+      title: t('futureReadySkills'),
+      description: t('futureReadySkillsDescription')
     }
   ]
 
@@ -252,24 +254,24 @@ const TeacherProgramsPage = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              AI Programs for Teachers
+              {t('teachersPageTitle')}
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-blue-100 max-w-4xl mx-auto">
-              Empower your teaching with AI. Our comprehensive programs help educators integrate artificial intelligence into their classrooms, enhance student learning, and prepare for the future of education.
+              {t('teachersPageDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/apply"
                 className="bg-white text-blue-900 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center shadow-lg"
               >
-                Apply Now
+                {t('applyNow')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="#programs"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-900 transition-all inline-flex items-center justify-center"
               >
-                Explore Programs
+                {t('explorePrograms')}
               </a>
             </div>
           </motion.div>
@@ -287,7 +289,7 @@ const TeacherProgramsPage = () => {
               className="bg-white rounded-lg shadow-lg p-6 border border-slate-200"
             >
               <div className="text-3xl font-bold text-blue-600 mb-2">200+</div>
-              <div className="text-slate-700">Teachers Trained</div>
+              <div className="text-slate-700">{t('teachersTrained')}</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -296,7 +298,7 @@ const TeacherProgramsPage = () => {
               className="bg-white rounded-lg shadow-lg p-6 border border-slate-200"
             >
               <div className="text-3xl font-bold text-emerald-600 mb-2">15</div>
-              <div className="text-slate-700">Program Modules</div>
+              <div className="text-slate-700">{t('programModules')}</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -305,7 +307,7 @@ const TeacherProgramsPage = () => {
               className="bg-white rounded-lg shadow-lg p-6 border border-slate-200"
             >
               <div className="text-3xl font-bold text-orange-600 mb-2">98%</div>
-              <div className="text-slate-700">Satisfaction Rate</div>
+              <div className="text-slate-700">{t('satisfactionRate')}</div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -314,7 +316,7 @@ const TeacherProgramsPage = () => {
               className="bg-white rounded-lg shadow-lg p-6 border border-slate-200"
             >
               <div className="text-3xl font-bold text-teal-600 mb-2">50+</div>
-              <div className="text-slate-700">Schools Impacted</div>
+              <div className="text-slate-700">{t('schoolsImpacted')}</div>
             </motion.div>
           </div>
         </div>
@@ -330,10 +332,10 @@ const TeacherProgramsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Why Choose AI4ALL Armenia for Teachers?
+              {t('whyChooseAI4ALL')}
             </h2>
             <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Our teacher programs are designed by educators, for educators, with practical applications you can implement immediately.
+              {t('whyChooseDescription')}
             </p>
           </motion.div>
 
@@ -361,7 +363,7 @@ const TeacherProgramsPage = () => {
       <section id="programs" className="py-8 bg-slate-50 border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
-            <h2 className="text-2xl font-bold text-slate-900">Available Programs</h2>
+            <h2 className="text-2xl font-bold text-slate-900">{t('availablePrograms')}</h2>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="flex items-center gap-2">
@@ -371,10 +373,10 @@ const TeacherProgramsPage = () => {
                   onChange={(e) => setSelectedLevel(e.target.value)}
                   className="border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-900"
                 >
-                  <option value="all">All Levels</option>
-                  <option value="beginner">Beginner</option>
-                  <option value="intermediate">Intermediate</option>
-                  <option value="advanced">Advanced</option>
+                  <option value="all">{t('allLevels')}</option>
+                  <option value="beginner">{t('beginner')}</option>
+                  <option value="intermediate">{t('intermediate')}</option>
+                  <option value="advanced">{t('advanced')}</option>
                 </select>
               </div>
               
@@ -385,7 +387,7 @@ const TeacherProgramsPage = () => {
                   onChange={(e) => setSelectedDuration(e.target.value)}
                   className="border border-slate-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white text-slate-900"
                 >
-                  <option value="all">All Durations</option>
+                  <option value="all">{t('allDurations')}</option>
                   <option value="4-weeks">4 Weeks</option>
                   <option value="5-weeks">5 Weeks</option>
                   <option value="6-weeks">6 Weeks</option>
@@ -417,7 +419,7 @@ const TeacherProgramsPage = () => {
                       program.level === 'intermediate' ? 'bg-orange-100 text-orange-800' :
                       'bg-red-100 text-red-800'
                     }`}>
-                      {program.level}
+                      {t(program.level as keyof typeof t)}
                     </span>
                   </div>
                   
@@ -430,7 +432,7 @@ const TeacherProgramsPage = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Users className="w-4 h-4 text-slate-500" />
-                      <span className="text-slate-700">{program.participants} participants</span>
+                      <span className="text-slate-700">{program.participants} {t('participants')}</span>
                     </div>
                     <div className="flex items-center gap-2">
                       <Video className="w-4 h-4 text-slate-500" />
@@ -438,7 +440,7 @@ const TeacherProgramsPage = () => {
                     </div>
                     <div className="flex items-center gap-2">
                       <Award className="w-4 h-4 text-slate-500" />
-                      <span className="text-slate-700">Certified</span>
+                      <span className="text-slate-700">{t('certified')}</span>
                     </div>
                   </div>
                   
@@ -447,13 +449,13 @@ const TeacherProgramsPage = () => {
                       onClick={() => setSelectedProgram(selectedProgram === program.id ? null : program.id)}
                       className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors"
                     >
-                      {selectedProgram === program.id ? 'Hide Details' : 'View Details'}
+                      {selectedProgram === program.id ? t('hideDetails') : t('viewDetails')}
                     </button>
                     <a
                       href="/apply"
                       className="bg-emerald-600 text-white py-2 px-4 rounded-lg hover:bg-emerald-700 transition-colors"
                     >
-                      Apply
+                      {t('apply')}
                     </a>
                   </div>
                 </div>
@@ -467,7 +469,7 @@ const TeacherProgramsPage = () => {
                   >
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Learning Objectives</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">{t('learningObjectives')}</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           {program.objectives.map((obj, i) => (
                             <li key={i} className="flex items-start gap-2">
@@ -479,7 +481,7 @@ const TeacherProgramsPage = () => {
                       </div>
                       
                       <div>
-                        <h4 className="font-semibold text-slate-900 mb-2">Requirements</h4>
+                        <h4 className="font-semibold text-slate-900 mb-2">{t('requirements')}</h4>
                         <ul className="text-sm text-slate-700 space-y-1">
                           {program.requirements.map((req, i) => (
                             <li key={i} className="flex items-start gap-2">
@@ -492,7 +494,7 @@ const TeacherProgramsPage = () => {
                     </div>
                     
                     <div className="mt-6">
-                      <h4 className="font-semibold text-slate-900 mb-2">Curriculum</h4>
+                      <h4 className="font-semibold text-slate-900 mb-2">{t('curriculum')}</h4>
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                         {program.curriculum.map((item, i) => (
                           <div key={i} className="text-sm text-slate-700 flex items-start gap-2">
@@ -504,7 +506,7 @@ const TeacherProgramsPage = () => {
                     </div>
                     
                     <div className="mt-6">
-                      <h4 className="font-semibold text-slate-900 mb-2">Upcoming Sessions</h4>
+                      <h4 className="font-semibold text-slate-900 mb-2">{t('upcomingSessions')}</h4>
                       <div className="space-y-2">
                         {program.nextSessions.map((session, i) => (
                           <div key={i} className="flex items-center justify-between bg-white p-3 rounded-lg border border-slate-200">
@@ -517,7 +519,7 @@ const TeacherProgramsPage = () => {
                               </div>
                             </div>
                             <span className="text-sm text-emerald-600 font-medium">
-                              {session.spots} spots left
+                              {session.spots} {t('spotsLeft')}
                             </span>
                           </div>
                         ))}
@@ -541,10 +543,10 @@ const TeacherProgramsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Teacher Success Stories
+              {t('teacherSuccessStories')}
             </h2>
             <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Hear from educators who have transformed their teaching with AI tools and methods.
+              {t('teacherSuccessDescription')}
             </p>
           </motion.div>
 
@@ -587,24 +589,24 @@ const TeacherProgramsPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl font-bold mb-6">
-              Ready to Transform Your Teaching?
+              {t('readyToTransform')}
             </h2>
             <p className="text-xl mb-8 text-blue-100">
-              Join hundreds of Armenian educators who are already using AI to enhance their teaching effectiveness and student engagement. Start your journey today.
+              {t('readyToTransformDescription')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/apply"
                 className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center shadow-lg"
               >
-                Apply Now
+                {t('applyNow')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
               <a
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-all inline-flex items-center justify-center"
               >
-                Contact Us
+                {t('contact')}
               </a>
             </div>
           </motion.div>

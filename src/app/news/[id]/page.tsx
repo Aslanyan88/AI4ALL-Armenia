@@ -5,6 +5,8 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, Clock, User, ArrowLeft, Share2, Tag, Copy, Check, ExternalLink, ArrowRight } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
+import { getArticleByNumericId, getText, Language } from '@/utils/articleHelpers'
 
 interface NewsArticle {
   id: number
@@ -1623,11 +1625,35 @@ const newsArticles: NewsArticle[] = [
 ]
 
 export default function NewsArticle({ params }: { params: { id: string } }) {
+  const { t, language } = useLanguage()
   const [isShareOpen, setIsShareOpen] = useState(false)
   const [copied, setCopied] = useState(false)
   const shareRef = useRef<HTMLDivElement>(null)
   
-  const article = newsArticles.find(a => a.id === parseInt(params.id))
+  // Try to get translated article first, fallback to original articles
+  const translatedArticle = getArticleByNumericId(parseInt(params.id))
+  
+  // Map article IDs to their correct image filenames
+  const getImagePath = (articleId: number) => {
+    const imageMap: { [key: number]: string } = {
+      1: '/news/AI4ALL Armenia Launches Nationwide Initiative.png',
+      2: '/news/EIF\'s AI4ALL Initiative and Teachers Adapt.png'
+    }
+    return imageMap[articleId] || '/news/AI4ALL Armenia Launches Nationwide Initiative.png'
+  }
+  
+  const article = translatedArticle ? {
+    id: parseInt(params.id),
+    type: 'news',
+    title: getText(translatedArticle.title, language as Language),
+    date: translatedArticle.publishDate,
+    category: getText(translatedArticle.category, language as Language),
+    excerpt: getText(translatedArticle.subtitle, language as Language),
+    image: getImagePath(parseInt(params.id)),
+    author: getText(translatedArticle.author, language as Language),
+    content: '', // Will be rendered differently
+    tags: []
+  } : newsArticles.find(a => a.id === parseInt(params.id))
 
   // Close share dropdown when clicking outside
   useEffect(() => {
@@ -1647,10 +1673,10 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Article Not Found</h1>
-          <p className="text-gray-600 mb-6">The article you're looking for doesn't exist.</p>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">{t('articleNotFound')}</h1>
+          <p className="text-gray-600 mb-6">{t('articleNotFoundDescription')}</p>
           <Link href="/news" className="text-primary-600 hover:text-primary-700 font-medium">
-            ← Back to News
+            ← {t('backToNews')}
           </Link>
         </div>
       </div>
@@ -1736,7 +1762,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
               className="inline-flex items-center text-blue-200 hover:text-white mb-6 transition-colors"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Back to News
+              {t('backToNews')}
             </Link>
             
             <div className="flex items-center mb-4">
@@ -1767,7 +1793,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
                   className="flex items-center text-blue-200 hover:text-white transition-colors"
                 >
                   <Share2 className="w-5 h-5 mr-2" />
-                  Share
+                  {t('share')}
                 </button>
                 
                 {/* Share Dropdown */}
@@ -1783,7 +1809,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
                     >
                       <div className="py-2">
                         <div className="px-4 py-2 text-xs font-medium text-gray-500 uppercase tracking-wider">
-                          Share this article
+                          {t('shareThisArticle')}
                         </div>
                         <hr className="border-gray-100" />
                         <button
@@ -1823,7 +1849,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
                           ) : (
                             <Copy className="w-5 h-5 mr-3 text-gray-500" />
                           )}
-                          {copied ? 'Link copied!' : 'Copy link'}
+                          {copied ? t('linkCopied') : t('copyLink')}
                         </button>
                       </div>
                     </motion.div>
@@ -1857,15 +1883,51 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
 
             {/* Article Body */}
             <div className="prose prose-lg max-w-none">
-              <div 
-                dangerouslySetInnerHTML={{ __html: article.content }}
-                className="prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-800 prose-p:leading-relaxed prose-p:text-base prose-a:text-primary-600 prose-a:no-underline hover:prose-a:text-primary-700 prose-strong:text-gray-900 prose-ul:text-gray-800 prose-ol:text-gray-800 prose-li:text-gray-800 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-4 prose-h4:text-lg prose-h4:font-medium prose-h4:mt-6 prose-h4:mb-3"
-                style={{ 
-                  color: '#1f2937',
-                  fontSize: '16px',
-                  lineHeight: '1.7'
-                }}
-              />
+              {translatedArticle ? (
+                // Render translated content using the structured format
+                <div className="prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-800 prose-p:leading-relaxed prose-p:text-base prose-a:text-primary-600 prose-a:no-underline hover:prose-a:text-primary-700 prose-strong:text-gray-900 prose-ul:text-gray-800 prose-ol:text-gray-800 prose-li:text-gray-800 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-4 prose-h4:text-lg prose-h4:font-medium prose-h4:mt-6 prose-h4:mb-3">
+                  {translatedArticle.content.map((block, index) => {
+                    switch (block.type) {
+                      case 'paragraph':
+                        return (
+                          <p key={index} className="mb-4 text-gray-800 leading-relaxed">
+                            {getText(block.text, language as Language)}
+                          </p>
+                        )
+                      case 'heading':
+                        return (
+                          <h3 key={index} className="text-xl font-semibold mb-3 mt-8 text-primary">
+                            {getText(block.text, language as Language)}
+                          </h3>
+                        )
+                      case 'list':
+                        return (
+                          <ul key={index} className="mb-4 space-y-2">
+                            {block.items?.map((item, itemIndex) => (
+                              <li key={itemIndex} className="flex items-start text-gray-800">
+                                <span className="text-accent mr-2">•</span>
+                                {item ? getText(item, language as Language) : ''}
+                              </li>
+                            ))}
+                          </ul>
+                        )
+                      default:
+                        return <div key={index}></div>
+                    }
+                  })}
+                </div>
+              ) : (
+                // Fallback to original content for articles without translation
+                <div 
+                  dangerouslySetInnerHTML={{ __html: article.content }}
+                  className="prose-headings:text-gray-900 prose-headings:font-bold prose-p:text-gray-800 prose-p:leading-relaxed prose-p:text-base prose-a:text-primary-600 prose-a:no-underline hover:prose-a:text-primary-700 prose-strong:text-gray-900 prose-ul:text-gray-800 prose-ol:text-gray-800 prose-li:text-gray-800 prose-h3:text-xl prose-h3:font-semibold prose-h3:mt-8 prose-h3:mb-4 prose-h4:text-lg prose-h4:font-medium prose-h4:mt-6 prose-h4:mb-3"
+                  style={{ 
+                    color: '#1f2937',
+                    fontSize: '16px',
+                    lineHeight: '1.7'
+                  }}
+                />
+              )}
             </div>
 
             {/* Tags */}
@@ -1873,7 +1935,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
               <div className="mt-12 pt-8 border-t border-gray-200">
                 <div className="flex items-center mb-4">
                   <Tag className="w-5 h-5 text-gray-500 mr-2" />
-                  <span className="text-gray-700 font-medium">Tags:</span>
+                  <span className="text-gray-700 font-medium">{t('tags')}</span>
                 </div>
                 <div className="flex flex-wrap gap-2">
                   {article.tags.map((tag, index) => (
@@ -1899,7 +1961,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Related Articles</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">{t('relatedArticles')}</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {newsArticles
                 .filter(a => a.id !== article.id)
@@ -1938,7 +2000,7 @@ export default function NewsArticle({ params }: { params: { id: string } }) {
                           <div className="flex items-center justify-between">
                             <span className="text-sm text-gray-500 truncate">{relatedArticle.author}</span>
                             <span className="text-primary-600 font-medium text-sm inline-flex items-center">
-                              Read More
+                              {t('readMore')}
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </span>
                           </div>

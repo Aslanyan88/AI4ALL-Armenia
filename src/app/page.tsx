@@ -4,29 +4,31 @@ import React from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { ArrowRight, Users, GraduationCap, Award, TrendingUp, Calendar, BookOpen } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const HomePage = () => {
+  const { t } = useLanguage()
   const impactStats = [
-    { label: 'Participants Empowered', value: '500+', icon: Users },
-    { label: 'Regions Reached', value: '11', icon: TrendingUp },
-    { label: 'Programs Completed', value: '25+', icon: GraduationCap },
-    { label: 'Success Rate', value: '95%', icon: Award },
+    { label: t('participantsEmpowered'), value: '500+', icon: Users },
+    { label: t('regionsReached'), value: '11', icon: TrendingUp },
+    { label: t('programsCompleted'), value: '25+', icon: GraduationCap },
+    { label: t('successRate'), value: '95%', icon: Award },
   ]
 
   const programs = [
     {
-      title: 'AI for Teachers',
-      description: 'Empower educators with AI tools for modern pedagogy and enhanced classroom efficiency.',
-      features: ['AI-Powered Lesson Planning', 'Automated Assessment', 'Classroom Management', 'Ethical AI Education'],
-      cta: 'Learn More',
+      title: t('aiForTeachers'),
+      description: t('teachersDescription'),
+      features: [t('aiPoweredLessons'), t('automatedAssessment'), t('classroomManagement'), t('ethicalAIEducation')],
+      cta: t('learnMore'),
       href: '/programs/teachers',
       icon: GraduationCap,
     },
     {
-      title: 'AI for Youth',
-      description: 'Equip young learners with essential AI skills for future-ready careers in technology.',
-      features: ['Python for Data Science', 'Machine Learning Basics', 'Deep Learning Fundamentals', 'Hands-on Projects'],
-      cta: 'Learn More',
+      title: t('aiForYouth'),
+      description: t('youthDescription'),
+      features: [t('pythonDataScience'), t('machineLearningBasics'), t('deepLearningFundamentals'), t('handsOnProjects')],
+      cta: t('learnMore'),
       href: '/programs/youth',
       icon: Users,
     },
@@ -35,14 +37,14 @@ const HomePage = () => {
   const testimonials = [
     {
       name: 'Karine Mayilyan',
-      role: 'Teacher, Yerevan',
-      quote: 'AI4ALL Armenia transformed my teaching approach. I now use AI tools to create engaging lessons and assess student progress more efficiently.',
+      role: t('karineRole'),
+      quote: t('karineTestimonial'),
       region: 'Yerevan',
     },
     {
       name: 'Armen Sargsyan',
-      role: 'Student, Gyumri',
-      quote: 'The program opened my eyes to the possibilities of AI. I\'m now pursuing a career in machine learning thanks to AI4ALL Armenia.',
+      role: t('armenRole'),
+      quote: t('armenTestimonial'),
       region: 'Gyumri',
     },
   ]
@@ -50,28 +52,28 @@ const HomePage = () => {
   const upcomingEvents = [
     {
       date: 'Jul 25, 2025',
-      title: 'AI for Teachers Info Session',
+      title: t('aiTeachersInfoSession'),
       location: 'Online',
-      type: 'Webinar',
+      type: t('webinar'),
     },
     {
       date: 'Aug 1, 2025',
-      title: 'Youth Program Applications Open',
+      title: t('youthApplicationsOpen'),
       location: 'Nationwide',
-      type: 'Application',
+      type: t('application'),
     },
     {
       date: 'Aug 15, 2025',
-      title: 'AI Workshop - Vanadzor',
+      title: t('aiWorkshopVanadzor'),
       location: 'Vanadzor Tech Center',
-      type: 'Workshop',
+      type: t('workshop'),
     },
   ]
 
   return (
-    <div className="bg-white">
+    <div className="bg-white dark:bg-slate-900 transition-colors duration-300">
       {/* Hero Section */}
-      <section className="relative min-h-screen bg-gradient-to-br from-slate-800 via-blue-800 to-indigo-800 text-white overflow-hidden flex items-center">
+      <section className="relative min-h-screen bg-gradient-to-br from-slate-800 via-blue-800 to-indigo-800 dark:from-slate-900 dark:via-blue-900 dark:to-indigo-900 text-white overflow-hidden flex items-center transition-colors duration-300">
         {/* Enhanced background with multiple layers */}
         <div className="absolute inset-0 bg-black/10"></div>
         <div className="absolute inset-0 bg-gradient-to-br from-blue-800/40 via-transparent to-indigo-800/40"></div>
@@ -92,22 +94,22 @@ const HomePage = () => {
             >
               <div className="mb-6">
                 <span className="inline-block bg-gradient-to-r from-blue-200 to-cyan-200 bg-clip-text text-transparent px-4 py-2 rounded-full text-sm font-bold border border-blue-300/50 bg-white/20 backdrop-blur-sm">
-                  Enterprise Incubator Foundation
+                  {t('heroFoundation')}
                 </span>
               </div>
               
               <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                <span className="block text-white">AI4ALL Armenia:</span>
+                <span className="block text-white">{t('heroTitle')}</span>
                 <span className="block bg-gradient-to-r from-blue-200 via-cyan-200 to-teal-200 bg-clip-text text-transparent">
-                  Empowering Our Nation&apos;s Future
+                  {t('heroSubtitle')}
                 </span>
                 <span className="block text-3xl md:text-4xl mt-2 text-blue-100">
-                  with AI
+                  {t('heroTagline')}
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl mb-8 text-blue-50 leading-relaxed font-medium">
-                An initiative bringing cutting-edge, human-centered AI education to every region of Armenia.
+                {t('heroDescription')}
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
@@ -115,14 +117,14 @@ const HomePage = () => {
                   href="/programs"
                   className="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all transform hover:scale-105 shadow-lg inline-flex items-center justify-center"
                 >
-                  Explore Programs
+                  {t('explorePrograms')}
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Link>
                 <Link
                   href="/apply"
                   className="border-2 border-blue-200 text-blue-50 px-8 py-4 rounded-lg font-semibold hover:bg-blue-100 hover:text-blue-900 transition-all transform hover:scale-105 inline-flex items-center justify-center"
                 >
-                  Apply Now
+                  {t('applyNow')}
                 </Link>
               </div>
             </motion.div>
@@ -171,7 +173,7 @@ const HomePage = () => {
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
         >
           <div className="flex flex-col items-center text-white">
-            <span className="text-sm mb-2 font-medium">Scroll to explore</span>
+            <span className="text-sm mb-2 font-medium">{t('scrollToExplore')}</span>
             <motion.div
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 1.5, repeat: Infinity }}
@@ -184,7 +186,7 @@ const HomePage = () => {
       </section>
 
       {/* Why AI4ALL Armenia Section */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-800 dark:to-slate-900 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -192,13 +194,11 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Why AI4ALL Armenia?
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 min-h-[4rem] flex items-center justify-center transition-colors duration-300">
+              {t('whyAI4ALL')}
             </h2>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Armenia&apos;s tech landscape is rapidly evolving, and AI literacy is crucial for future readiness. 
-              Our program bridges skills gaps, fosters innovation, and promotes ethical AI development 
-              across all regions of Armenia.
+            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto min-h-[6rem] flex items-center justify-center leading-relaxed transition-colors duration-300">
+              {t('whyDescription')}
             </p>
           </motion.div>
 
@@ -207,15 +207,14 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow group border border-slate-200"
+              className="bg-white dark:bg-slate-700 rounded-xl p-8 shadow-lg hover:shadow-xl dark:hover:shadow-2xl transition-all group border border-slate-200 dark:border-slate-600 min-h-[320px] flex flex-col"
             >
-              <div className="bg-gradient-to-r from-blue-100 to-blue-200 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <Users className="w-10 h-10 text-blue-700" />
+              <div className="bg-gradient-to-r from-blue-100 to-blue-200 dark:from-blue-800 dark:to-blue-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <Users className="w-10 h-10 text-blue-700 dark:text-blue-200" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4 text-center">Inclusive Access</h3>
-              <p className="text-slate-700 text-center">
-                Reaching youth and teachers across all 11 regions of Armenia, ensuring no one is left behind 
-                in the AI revolution.
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 text-center min-h-[3rem] flex items-center justify-center transition-colors">{t('inclusiveAccess')}</h3>
+              <p className="text-slate-700 dark:text-slate-300 text-center leading-relaxed flex-grow flex items-center transition-colors">
+                {t('inclusiveDescription')}
               </p>
             </motion.div>
 
@@ -223,15 +222,14 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow group border border-slate-200"
+              className="bg-white dark:bg-slate-700 rounded-xl p-8 shadow-lg hover:shadow-xl dark:hover:shadow-2xl transition-all group border border-slate-200 dark:border-slate-600 min-h-[320px] flex flex-col"
             >
-              <div className="bg-gradient-to-r from-emerald-100 to-emerald-200 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <BookOpen className="w-10 h-10 text-emerald-700" />
+              <div className="bg-gradient-to-r from-emerald-100 to-emerald-200 dark:from-emerald-800 dark:to-emerald-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <BookOpen className="w-10 h-10 text-emerald-700 dark:text-emerald-200" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4 text-center">Practical Skills</h3>
-              <p className="text-slate-700 text-center">
-                Hands-on learning with real-world applications, preparing participants for immediate 
-                impact in their careers and communities.
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 text-center min-h-[3rem] flex items-center justify-center transition-colors">{t('practicalSkills')}</h3>
+              <p className="text-slate-700 dark:text-slate-300 text-center leading-relaxed flex-grow flex items-center transition-colors">
+                {t('practicalDescription')}
               </p>
             </motion.div>
 
@@ -239,15 +237,14 @@ const HomePage = () => {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow group border border-slate-200"
+              className="bg-white dark:bg-slate-700 rounded-xl p-8 shadow-lg hover:shadow-xl dark:hover:shadow-2xl transition-all group border border-slate-200 dark:border-slate-600 min-h-[320px] flex flex-col"
             >
-              <div className="bg-gradient-to-r from-orange-100 to-orange-200 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
-                <Award className="w-10 h-10 text-orange-700" />
+              <div className="bg-gradient-to-r from-orange-100 to-orange-200 dark:from-orange-800 dark:to-orange-700 w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
+                <Award className="w-10 h-10 text-orange-700 dark:text-orange-200" />
               </div>
-              <h3 className="text-xl font-semibold text-slate-900 mb-4 text-center">Ethical Foundation</h3>
-              <p className="text-slate-700 text-center">
-                Emphasizing human-centered, ethical AI development to ensure responsible innovation 
-                and societal benefit.
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-4 text-center min-h-[3rem] flex items-center justify-center transition-colors">{t('ethicalFoundation')}</h3>
+              <p className="text-slate-700 dark:text-slate-300 text-center leading-relaxed flex-grow flex items-center transition-colors">
+                {t('ethicalDescription')}
               </p>
             </motion.div>
           </div>
@@ -255,7 +252,7 @@ const HomePage = () => {
       </section>
 
       {/* Programs Highlights */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -263,11 +260,11 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Our Programs
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 min-h-[4rem] flex items-center justify-center transition-colors duration-300">
+              {t('programsTitle')}
             </h2>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Choose the program that fits your goals and start your AI journey today.
+            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto min-h-[3rem] flex items-center justify-center transition-colors duration-300">
+              {t('programsSubtitle')}
             </p>
           </motion.div>
 
@@ -280,29 +277,29 @@ const HomePage = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-slate-200 group-hover:border-blue-300">
+                <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-slate-200 group-hover:border-blue-300 min-h-[420px] flex flex-col">
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mr-4 ${
                       index === 0 ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'bg-gradient-to-r from-emerald-600 to-emerald-700'
                     }`}>
                       <program.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900">{program.title}</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 leading-tight">{program.title}</h3>
                   </div>
-                  <p className="text-slate-700 mb-6 text-lg">{program.description}</p>
+                  <p className="text-slate-700 mb-6 text-lg leading-relaxed min-h-[5rem] flex-grow">{program.description}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
                     {program.features.map((feature, idx) => (
                       <div key={idx} className="flex items-center text-slate-700">
-                        <div className={`w-3 h-3 rounded-full mr-3 ${
+                        <div className={`w-3 h-3 rounded-full mr-3 flex-shrink-0 ${
                           index === 0 ? 'bg-blue-600' : 'bg-emerald-600'
                         }`}></div>
-                        <span className="text-sm">{feature}</span>
+                        <span className="text-sm leading-tight">{feature}</span>
                       </div>
                     ))}
                   </div>
                   <Link
                     href={program.href}
-                    className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 ${
+                    className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 mt-auto ${
                       index === 0 
                         ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800' 
                         : 'bg-gradient-to-r from-emerald-600 to-emerald-700 text-white hover:from-emerald-700 hover:to-emerald-800'
@@ -319,7 +316,7 @@ const HomePage = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-900 dark:to-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -327,11 +324,11 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Voices of AI4ALL Armenia
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 min-h-[4rem] flex items-center justify-center transition-colors duration-300">
+              {t('testimonialsSectionTitle')}
             </h2>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Hear from our participants about their transformative journey with AI4ALL Armenia.
+            <p className="text-xl text-slate-700 dark:text-slate-300 max-w-3xl mx-auto min-h-[3rem] flex items-center justify-center leading-relaxed transition-colors duration-300">
+              {t('testimonialsSectionSubtitle')}
             </p>
           </motion.div>
 
@@ -342,7 +339,7 @@ const HomePage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white rounded-2xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300"
+                className="bg-white rounded-2xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300 min-h-[360px] flex flex-col"
               >
                 <div className="flex items-center mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mr-4">
@@ -359,13 +356,13 @@ const HomePage = () => {
                     </div>
                   </div>
                 </div>
-                <blockquote className="text-slate-700 text-lg mb-6 italic leading-relaxed">
+                <blockquote className="text-slate-700 text-lg mb-6 italic leading-relaxed flex-grow">
                   &quot;{testimonial.quote}&quot;
                 </blockquote>
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between mt-auto">
                   <div className="flex items-center">
                     <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full mr-3"></div>
-                    <span className="text-sm font-medium text-slate-500">Participant Story</span>
+                    <span className="text-sm font-medium text-slate-500">{t('participantStory')}</span>
                   </div>
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
@@ -382,7 +379,7 @@ const HomePage = () => {
               href="/impact"
               className="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-all transform hover:scale-105 shadow-lg"
             >
-              Read All Stories
+              {t('readAllStories')}
               <ArrowRight className="ml-2 w-5 h-5" />
             </Link>
           </div>
@@ -390,7 +387,7 @@ const HomePage = () => {
       </section>
 
       {/* Upcoming Events */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white dark:bg-slate-800 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -398,11 +395,11 @@ const HomePage = () => {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Upcoming Events
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-6 min-h-[4rem] flex items-center justify-center transition-colors duration-300">
+              {t('upcomingEvents')}
             </h2>
-            <p className="text-xl text-slate-700 max-w-3xl mx-auto">
-              Stay updated with our latest events, workshops, and program announcements.
+            <p className="text-xl text-slate-700 max-w-3xl mx-auto min-h-[3rem] flex items-center justify-center leading-relaxed">
+              {t('upcomingEventsSubtitle')}
             </p>
           </motion.div>
 
@@ -413,15 +410,15 @@ const HomePage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-slate-50 rounded-lg p-6 hover:shadow-lg transition-shadow border border-slate-200"
+                className="bg-slate-50 rounded-lg p-6 hover:shadow-lg transition-shadow border border-slate-200 min-h-[180px] flex flex-col"
               >
                 <div className="flex items-center mb-3">
                   <Calendar className="w-5 h-5 text-blue-600 mr-2" />
                   <span className="text-blue-600 font-semibold">{event.date}</span>
                 </div>
-                <h3 className="text-lg font-semibold text-slate-900 mb-2">{event.title}</h3>
-                <p className="text-slate-700 text-sm mb-2">{event.location}</p>
-                <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">
+                <h3 className="text-lg font-semibold text-slate-900 mb-2 leading-tight min-h-[3rem] flex items-start">{event.title}</h3>
+                <p className="text-slate-700 text-sm mb-2 flex-grow">{event.location}</p>
+                <span className="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium mt-auto self-start">
                   {event.type}
                 </span>
               </motion.div>
@@ -433,7 +430,7 @@ const HomePage = () => {
               href="/news"
               className="inline-flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
             >
-              View All News & Events
+              {t('viewAllNews')}
               <ArrowRight className="ml-2 w-4 h-4" />
             </Link>
           </div>

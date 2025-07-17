@@ -3,8 +3,10 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Instagram, Youtube } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const ContactPage = () => {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -40,36 +42,36 @@ const ContactPage = () => {
     })
     
     setIsSubmitting(false)
-    alert('Thank you for your message! We will get back to you soon.')
+    alert(t('thankYouMessage'))
   }
 
   const contactInfo = [
     {
       icon: Mail,
-      title: 'Email',
+      title: t('contactEmail'),
       value: 'info@eif.am',
-      description: 'Send us an email and we\'ll respond within 24 hours',
+      description: t('emailDescription'),
       link: 'mailto:info@eif.am',
     },
     {
       icon: Phone,
-      title: 'Phone',
+      title: t('contactPhone'),
       value: '011219797',
-      description: 'Call us during business hours',
+      description: t('phoneDescription'),
       link: 'tel:011219797',
     },
     {
       icon: MapPin,
-      title: 'Office',
+      title: t('contactOffice'),
       value: 'Enterprise Incubator Foundation',
-      description: '21/1 Bagrevand Street, Yerevan, Armenia 0062',
+      description: t('officeAddress'),
       link: 'https://maps.google.com/?q=21/1+Bagrevand+Street,+Yerevan,+Armenia+0062',
     },
     {
       icon: Clock,
-      title: 'Hours',
-      value: 'Mon - Fri: 9AM - 6PM',
-      description: 'Armenia Time (GMT+4)',
+      title: t('contactHours'),
+      value: t('businessHours'),
+      description: t('armeniaTime'),
       link: null,
     },
   ]
@@ -81,30 +83,30 @@ const ContactPage = () => {
   ]
 
   const inquiryTypes = [
-    { value: 'general', label: 'General Inquiry' },
-    { value: 'programs', label: 'Program Information' },
-    { value: 'application', label: 'Application Support' },
-    { value: 'partnership', label: 'Partnership Opportunities' },
-    { value: 'media', label: 'Media Inquiries' },
-    { value: 'technical', label: 'Technical Support' },
+    { value: 'general', label: t('generalInquiry') },
+    { value: 'programs', label: t('programInformation') },
+    { value: 'application', label: t('applicationSupport') },
+    { value: 'partnership', label: t('partnershipInquiries') },
+    { value: 'media', label: t('mediaInquiries') },
+    { value: 'technical', label: t('technicalSupport') },
   ]
 
   const faqs = [
     {
-      question: 'How can I apply for AI4ALL Armenia programs?',
-      answer: 'You can apply through our online application portal. Visit our Programs page to learn more about eligibility and application deadlines.',
+      question: t('faqHow'),
+      answer: t('faqHowAnswer'),
     },
     {
-      question: 'Are there any fees for the programs?',
-      answer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF.',
+      question: t('faqFees'),
+      answer: t('faqFeesAnswer'),
     },
     {
-      question: 'Can I participate if I live outside Yerevan?',
-      answer: 'Absolutely! Our programs are designed to reach all regions of Armenia with online delivery and regional workshops.',
+      question: t('faqOutside'),
+      answer: t('faqOutsideAnswer'),
     },
     {
-      question: 'What technical requirements do I need?',
-      answer: 'You need a computer with internet access and basic software that we\'ll help you install.',
+      question: t('faqTech'),
+      answer: t('faqTechAnswer'),
     },
   ]
 
@@ -120,10 +122,10 @@ const ContactPage = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Contact Us
+              {t('contactTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Get in touch with our team for questions, partnerships, or support.
+              {t('contactSubtitle')}
             </p>
           </motion.div>
         </div>
@@ -172,16 +174,16 @@ const ContactPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('sendMessage')}</h2>
               <p className="text-gray-600 mb-8">
-                Have a question or want to learn more about AI4ALL Armenia? We&apos;d love to hear from you.
+                {t('contactSubtitle')}
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                      Full Name *
+                      {t('name')} *
                     </label>
                     <input
                       type="text"
@@ -191,12 +193,12 @@ const ContactPage = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="Your full name"
+                      placeholder={t('yourFullName')}
                     />
                   </div>
                   <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                      Email Address *
+                      {t('email')} *
                     </label>
                     <input
                       type="email"
@@ -206,14 +208,14 @@ const ContactPage = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                      placeholder="your@email.com"
+                      placeholder={t('yourEmail')}
                     />
                   </div>
                 </div>
 
                 <div>
                   <label htmlFor="inquiryType" className="block text-sm font-medium text-gray-700 mb-2">
-                    Inquiry Type
+                    {t('inquiryType')}
                   </label>
                   <select
                     id="inquiryType"
@@ -232,7 +234,7 @@ const ContactPage = () => {
 
                 <div>
                   <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                    Subject *
+                    {t('subject')} *
                   </label>
                   <input
                     type="text"
@@ -242,13 +244,13 @@ const ContactPage = () => {
                     onChange={handleInputChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="Brief subject line"
+                    placeholder={t('briefSubject')}
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message *
+                    {t('message')} *
                   </label>
                   <textarea
                     id="message"
@@ -258,7 +260,7 @@ const ContactPage = () => {
                     required
                     rows={6}
                     className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    placeholder="Tell us more about your inquiry..."
+                    placeholder={t('tellUsMore')}
                   />
                 </div>
 
@@ -270,11 +272,11 @@ const ContactPage = () => {
                   {isSubmitting ? (
                     <>
                       <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2"></div>
-                      Sending...
+                      {t('sending')}
                     </>
                   ) : (
                     <>
-                      Send Message
+                      {t('sendMessage')}
                       <Send className="w-5 h-5 ml-2" />
                     </>
                   )}
@@ -291,10 +293,9 @@ const ContactPage = () => {
             >
               {/* Social Media */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Follow Us</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('followUs')}</h3>
                 <p className="text-gray-600 mb-6">
-                  Stay connected with AI4ALL Armenia on social media for the latest updates, 
-                  success stories, and community highlights.
+                  {t('followUsDescription')}
                 </p>
                 <div className="flex space-x-4">
                   {socialLinks.map((social) => (
@@ -314,7 +315,7 @@ const ContactPage = () => {
 
               {/* Map */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Our Location</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('ourLocation')}</h3>
                 <div className="bg-gray-100 rounded-lg p-8 text-center">
                   <MapPin className="w-12 h-12 text-gray-400 mx-auto mb-4" />
                   <p className="text-gray-600">
@@ -322,14 +323,14 @@ const ContactPage = () => {
                     Yerevan, Armenia
                   </p>
                   <p className="text-sm text-gray-500 mt-2">
-                    Interactive map coming soon
+                    {t('interactiveMapSoon')}
                   </p>
                 </div>
               </div>
 
               {/* Quick FAQs */}
               <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Quick Answers</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">{t('quickAnswers')}</h3>
                 <div className="space-y-4">
                   {faqs.map((faq, index) => (
                     <motion.div
@@ -359,27 +360,26 @@ const ContactPage = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Partnership Opportunities</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('partnershipOpportunities')}</h2>
               <p className="text-gray-600 mb-6">
-                We&apos;re always looking for organizations that share our vision of democratizing 
-                AI education in Armenia. Partner with us to expand our impact.
+                {t('partnershipDescription')}
               </p>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Corporate partnerships and sponsorships</span>
+                  <span>{t('corporatePartnerships')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Educational institution collaborations</span>
+                  <span>{t('educationalCollaborations')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Technology provider partnerships</span>
+                  <span>{t('technologyProviders')}</span>
                 </li>
                 <li className="flex items-start">
                   <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                  <span>Mentorship and speaker opportunities</span>
+                  <span>{t('mentorshipOpportunities')}</span>
                 </li>
               </ul>
             </motion.div>
@@ -390,17 +390,16 @@ const ContactPage = () => {
               transition={{ duration: 0.8 }}
               id="media"
             >
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Media Inquiries</h2>
+              <h2 className="text-3xl font-bold text-gray-900 mb-6">{t('mediaInquiries')}</h2>
               <p className="text-gray-600 mb-6">
-                Media professionals can contact us for interviews, press releases, 
-                and access to program information and participant stories.
+                {t('mediaDescription')}
               </p>
               <div className="bg-white rounded-lg p-6 shadow-md">
-                <h4 className="font-semibold text-gray-900 mb-4">Media Contact</h4>
+                <h4 className="font-semibold text-gray-900 mb-4">{t('mediaContact')}</h4>
                 <div className="space-y-2 text-gray-600">
                   <p>Email: info@eif.am</p>
                   <p>Phone: 011219797</p>
-                  <p>Response time: Within 2 hours during business hours</p>
+                  <p>{t('responseTime')}</p>
                 </div>
               </div>
             </motion.div>

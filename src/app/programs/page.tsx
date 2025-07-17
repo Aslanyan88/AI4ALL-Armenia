@@ -4,45 +4,47 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { GraduationCap, Users, Clock, Calendar, CheckCircle, ArrowRight, Plus, Minus } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const ProgramsPage = () => {
+  const { t } = useLanguage()
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null)
 
   const teacherProgram = {
-    title: 'AI for Teachers',
-    subtitle: 'Empowering Educators with AI Tools',
-    description: 'Transform your teaching approach with cutting-edge AI tools designed for modern pedagogy.',
+    title: t('teacherProgramTitle'),
+    subtitle: t('teacherProgramSubtitle'),
+    description: t('teacherProgramDescription'),
     icon: GraduationCap,
     modules: [
-      'AI-Powered Lesson Planning',
-      'Automated Test & Assessment Generation',
-      'AI for Classroom Management & Efficiency',
-      'Ethical AI in Education',
-      'Data-Driven Student Progress Analysis',
-      'AI Tools for Content Creation',
-      'Personalized Learning with AI',
-      'AI-Assisted Grading Systems',
+      t('teacherModule1'),
+      t('teacherModule2'),
+      t('teacherModule3'),
+      t('teacherModule4'),
+      t('teacherModule5'),
+      t('teacherModule6'),
+      t('teacherModule7'),
+      t('teacherModule8'),
     ],
     benefits: [
-      'Enhanced professional development',
-      'Increased classroom efficiency',
-      'Modern pedagogical approaches',
-      'Leadership in technology integration',
-      'Improved student engagement',
-      'Data-driven teaching decisions',
+      t('teacherBenefit1'),
+      t('teacherBenefit2'),
+      t('teacherBenefit3'),
+      t('teacherBenefit4'),
+      t('teacherBenefit5'),
+      t('teacherBenefit6'),
     ],
     eligibility: [
-      'Age up to 29 years',
-      'Current or future teacher in Armenia',
-      'Basic computer literacy',
-      'Commitment to complete the program',
-      'Interest in educational technology',
+      t('teacherEligibility1'),
+      t('teacherEligibility2'),
+      t('teacherEligibility3'),
+      t('teacherEligibility4'),
+      t('teacherEligibility5'),
     ],
     structure: {
-      duration: '8-week intensive program',
-      format: 'Blended learning: online modules + live virtual workshops',
-      schedule: 'Evenings and weekends to accommodate teaching schedules',
-      certification: 'AI4ALL Armenia Teacher Certificate',
+      duration: t('teacherDuration'),
+      format: t('teacherFormat'),
+      schedule: t('teacherSchedule'),
+      certification: t('teacherCertification'),
     },
     applicationProcess: [
       'Complete online application form',
@@ -54,40 +56,40 @@ const ProgramsPage = () => {
   }
 
   const youthProgram = {
-    title: 'AI for Youth',
-    subtitle: 'Building Tomorrow\'s AI Leaders',
-    description: 'Develop essential AI skills for future-ready careers in technology.',
+    title: t('youthProgramTitle'),
+    subtitle: t('youthProgramSubtitle'),
+    description: t('youthProgramDesc'),
     icon: Users,
     modules: [
-      'Introduction to AI & Machine Learning',
-      'Python for Data Science',
-      'Fundamentals of Deep Learning',
-      'Natural Language Processing Basics',
-      'Computer Vision Essentials',
-      'Ethical AI & Societal Impact',
-      'Hands-on Project Development',
-      'AI in Industry Applications',
+      t('youthModule1'),
+      t('youthModule2'),
+      t('youthModule3'),
+      t('youthModule4'),
+      t('youthModule5'),
+      t('youthModule6'),
+      t('youthModule7'),
+      t('youthModule8'),
     ],
     benefits: [
-      'Highly sought-after technical skills',
-      'Enhanced critical thinking abilities',
-      'Problem-solving skill development',
-      'Career pathways in diverse AI fields',
-      'Access to professional networks',
-      'Portfolio of real-world projects',
+      t('youthBenefit1'),
+      t('youthBenefit2'),
+      t('youthBenefit3'),
+      t('youthBenefit4'),
+      t('youthBenefit5'),
+      t('youthBenefit6'),
     ],
     eligibility: [
-      'Age 15-29 years',
-      'Residing in Armenia',
-      'High school diploma or equivalent',
-      'Basic programming knowledge (preferred)',
-      'Commitment to complete the program',
+      t('youthEligibility1'),
+      t('youthEligibility2'),
+      t('youthEligibility3'),
+      t('youthEligibility4'),
+      t('youthEligibility5'),
     ],
     structure: {
-      duration: '12-week foundational course + 6-month advanced track',
-      format: 'Interactive lectures, coding labs, group projects',
-      schedule: 'Weekend sessions and online modules',
-      certification: 'AI4ALL Armenia Youth Certificate',
+      duration: t('youthDuration'),
+      format: t('youthFormat'),
+      schedule: t('youthSchedule'),
+      certification: t('youthCertification'),
     },
     applicationProcess: [
       'Complete online application form',
@@ -100,28 +102,28 @@ const ProgramsPage = () => {
 
   const faqs = [
     {
-      question: 'What are the technical requirements for the programs?',
-      answer: 'You need a computer with internet access, basic software that we\'ll help you install, and enthusiasm to learn. We provide all necessary learning materials and software licenses.',
+      question: t('faqQuestion1'),
+      answer: t('faqAnswer1'),
     },
     {
-      question: 'How much time commitment is required?',
-      answer: 'Teachers program: 6-8 hours per week. Youth program: 10-12 hours per week. We understand participants have other commitments, so the schedule is flexible.',
+      question: t('faqQuestion2'),
+      answer: t('faqAnswer2'),
     },
     {
-      question: 'Are there any fees for the programs?',
-      answer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF. This includes all materials, software, and certification.',
+      question: t('faqQuestion3'),
+      answer: t('faqAnswer3'),
     },
     {
-      question: 'What certification do I receive upon completion?',
-      answer: 'Graduates receive an AI4ALL Armenia certificate recognized by local tech companies and educational institutions. We also provide LinkedIn certificates and portfolio development support.',
+      question: t('faqQuestion4'),
+      answer: t('faqAnswer4'),
     },
     {
-      question: 'Can I participate if I live outside Yerevan?',
-      answer: 'Absolutely! Our programs are designed to reach all regions of Armenia. Most content is delivered online, with some regional workshops and meetups.',
+      question: t('faqQuestion5'),
+      answer: t('faqAnswer5'),
     },
     {
-      question: 'What job opportunities are available after completion?',
-      answer: 'Graduates find opportunities in AI development, data analysis, educational technology, and more. We provide career guidance and connections to our partner companies.',
+      question: t('faqQuestion6'),
+      answer: t('faqAnswer6'),
     },
   ]
 
@@ -141,10 +143,10 @@ const ProgramsPage = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              Our Programs
+              {t('programsHeroTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Choose the program that fits your goals and start your AI journey today.
+              {t('programsHeroSubtitle')}
             </p>
           </motion.div>
         </div>
@@ -172,14 +174,14 @@ const ProgramsPage = () => {
               <div className="p-6 flex-1 flex flex-col">
                 <div className="space-y-6 flex-1">
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3">Program Duration</h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-3">{t('programDuration')}</h3>
                     <div className="flex items-center text-slate-700">
                       <Clock className="w-4 h-4 mr-2" />
                       <span>{teacherProgram.structure.duration}</span>
                     </div>
                   </div>
                   <div>
-                    <h3 className="text-lg font-semibold text-slate-900 mb-3">Key Benefits</h3>
+                    <h3 className="text-lg font-semibold text-slate-900 mb-3">{t('keyBenefits')}</h3>
                     <ul className="space-y-2">
                       {teacherProgram.benefits.slice(0, 3).map((benefit, index) => (
                         <li key={index} className="flex items-start">
@@ -273,10 +275,10 @@ const ProgramsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Choose Your Path
+              {t('chooseYourPath')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Both programs are designed to provide comprehensive AI education tailored to your specific needs and career goals.
+              {t('programComparisonDescription')}
             </p>
           </motion.div>
 
@@ -284,36 +286,36 @@ const ProgramsPage = () => {
             <table className="w-full bg-white rounded-lg shadow-lg overflow-hidden">
               <thead className="bg-gray-50">
                 <tr>
-                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">Feature</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">AI for Teachers</th>
-                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">AI for Youth</th>
+                  <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900">{t('feature')}</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">{t('aiForTeachers')}</th>
+                  <th className="px-6 py-4 text-center text-sm font-semibold text-gray-900">{t('aiForYouth')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200">
                 <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Duration</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">8 weeks</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">12 weeks + 6 months</td>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">{t('duration')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('teacherDuration')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('youthDuration')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Age Range</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Up to 29</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">15-29</td>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">{t('ageRange')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('teacherEligibility1')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('youthEligibility1')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Schedule</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Evenings & Weekends</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Weekends & Online</td>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">{t('schedule')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('eveningsWeekends')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('weekendsOnline')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Focus</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Educational AI Tools</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Technical AI Skills</td>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">{t('focus')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('educationalAITools')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('technicalAISkills')}</td>
                 </tr>
                 <tr>
-                  <td className="px-6 py-4 text-sm font-medium text-gray-900">Prerequisites</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">Teaching Background</td>
-                  <td className="px-6 py-4 text-sm text-gray-600 text-center">High School Diploma</td>
+                  <td className="px-6 py-4 text-sm font-medium text-gray-900">{t('prerequisites')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('teachingBackground')}</td>
+                  <td className="px-6 py-4 text-sm text-gray-600 text-center">{t('highSchoolDiploma')}</td>
                 </tr>
               </tbody>
             </table>
@@ -331,7 +333,7 @@ const ProgramsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Frequently Asked Questions
+              {t('frequentlyAskedQuestions')}
             </h2>
             <p className="text-xl text-gray-600">
               Get answers to common questions about our AI programs.
@@ -383,24 +385,24 @@ const ProgramsPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Start Your AI Journey?
+              {t('readyToStart')}
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Join hundreds of Armenian youth and teachers who are already transforming their futures with AI.
+              {t('joinHundreds')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/apply"
                 className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors inline-flex items-center justify-center shadow-lg"
               >
-                Apply Now
+                {t('applyNow')}
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
               <Link
                 href="/contact"
                 className="border-2 border-white text-white px-8 py-3 rounded-md font-semibold hover:bg-white hover:text-blue-600 transition-colors inline-flex items-center justify-center"
               >
-                Have Questions?
+                {t('haveQuestions')}
               </Link>
             </div>
           </motion.div>

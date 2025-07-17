@@ -1,4 +1,4 @@
-// Basic language context for AI4ALL Armenia
+// Comprehensive translations for AI4ALL Armenia
 export const translations = {
   en: {
     // Navigation
@@ -6,31 +6,477 @@ export const translations = {
     about: 'About',
     programs: 'Programs',
     impact: 'Impact',
-    news: 'News & Events',
+    news: 'News',
     contact: 'Contact',
     applyNow: 'Apply Now',
     
+    // Language Selector
+    language: 'Language',
+    english: 'English',
+    armenian: 'Armenian',
+    russian: 'Russian',
+    
     // Hero Section
+    heroFoundation: 'Enterprise Incubator Foundation',
     heroTitle: 'AI4ALL Armenia:',
     heroSubtitle: 'Empowering Our Nation\'s Future',
     heroTagline: 'with AI',
     heroDescription: 'An initiative bringing cutting-edge, human-centered AI education to every region of Armenia.',
     explorePrograms: 'Explore Programs',
+    scrollToExplore: 'Scroll to explore',
     
-    // Programs
-    allPrograms: 'All Programs',
-    forTeachers: 'For Teachers',
-    forYouth: 'For Youth',
+    // Impact Stats
+    participantsEmpowered: 'Participants Empowered',
+    regionsReached: 'Regions Reached',
+    programsCompleted: 'Programs Completed',
+    successRate: 'Success Rate',
     
-    // Stats
-    studentsLabel: 'Students Trained',
-    teachersLabel: 'Teachers Certified',
-    schoolsLabel: 'School Partners',
-    regionsLabel: 'Regions Covered',
+    // Why AI4ALL Armenia Section
+    whyAI4ALL: 'Why AI4ALL Armenia?',
+    whyDescription: 'Armenia\'s tech landscape is rapidly evolving, and AI literacy is crucial for future readiness. Our program bridges skills gaps, fosters innovation, and promotes ethical AI development across all regions.',
+    inclusiveAccess: 'Inclusive Access',
+    inclusiveDescription: 'Reaching youth and teachers across all 11 regions of Armenia, ensuring no one is left behind in the AI revolution.',
+    practicalSkills: 'Practical Skills',
+    practicalDescription: 'Hands-on learning with real-world applications, preparing participants for immediate impact in their careers and communities.',
+    ethicalFoundation: 'Ethical Foundation',
+    ethicalDescription: 'Emphasizing human-centered, ethical AI development to ensure responsible innovation and societal benefit.',
+    
+    // Testimonials Section
+    testimonialsSectionTitle: 'Voices of AI4ALL Armenia',
+    testimonialsSectionSubtitle: 'Hear from our participants about their transformative journey with AI4ALL Armenia.',
+    participantStory: 'Participant Story',
+    readAllStories: 'Read All Stories',
+    
+    // Events Section
+    upcomingEventsSubtitle: 'Stay updated with our latest events, workshops, and program announcements.',
+    viewAllNews: 'View All News & Events',
+    
+    // Programs Section
+    programsTitle: 'Our Programs',
+    programsSubtitle: 'Choose the program that fits your goals and start your AI journey today',
+    aiForTeachers: 'AI for Teachers',
+    aiForYouth: 'AI for Youth',
+    teachersDescription: 'Empower educators with AI tools for modern pedagogy and enhanced classroom efficiency.',
+    youthDescription: 'Equip young learners with essential AI skills for future-ready careers in technology.',
+    
+    // Teacher Program Features
+    aiPoweredLessons: 'AI-Powered Lesson Planning',
+    automatedAssessment: 'Automated Assessment',
+    classroomManagement: 'Classroom Management',
+    ethicalAIEducation: 'Ethical AI Education',
+    
+    // Youth Program Features
+    pythonDataScience: 'Python for Data Science',
+    machineLearningBasics: 'Machine Learning Basics',
+    deepLearningFundamentals: 'Deep Learning Fundamentals',
+    handsOnProjects: 'Hands-on Projects',
+    
+    // Testimonials
+    testimonialsTitle: 'Success Stories',
+    karineTestimonial: 'AI4ALL Armenia transformed my teaching approach. I now use AI tools to create engaging lessons and assess student progress more efficiently.',
+    armenTestimonial: 'The program opened my eyes to the possibilities of AI. I\'m now pursuing a career in machine learning thanks to AI4ALL Armenia.',
+    karineRole: 'Teacher, Yerevan',
+    armenRole: 'Student, Gyumri',
+    
+    // Events
+    upcomingEvents: 'Upcoming Events',
+    aiTeachersInfoSession: 'AI for Teachers Info Session',
+    youthApplicationsOpen: 'Youth Program Applications Open',
+    aiWorkshopVanadzor: 'AI Workshop - Vanadzor',
+    webinar: 'Webinar',
+    application: 'Application',
+    workshop: 'Workshop',
+    
+    // Program Details
+    programDuration: 'Program Duration',
+    keyBenefits: 'Key Benefits',
+    learnMore: 'Learn More',
+    
+    // News Section
+    newsTitle: 'Latest News & Updates',
+    newsSubtitle: 'Stay updated with our latest achievements, events, and program developments',
+    readMore: 'Read More',
+    allNews: 'All News',
+    events: 'Events',
+    announcements: 'Announcements',
+    filterBy: 'Filter by',
+    
+    // About Section
+    aboutTitle: 'About AI4ALL Armenia',
+    aboutHeroTitle: 'About AI4ALL Armenia',
+    aboutHeroSubtitle: 'Democratizing AI education to cultivate a new generation of AI changemakers in Armenia.',
+    ourStory: 'Our Story',
+    ourMission: 'Our Mission',
+    ourVision: 'Our Vision',
+    partnerships: 'Our Partners',
+    
+    // About Story Content
+    storyParagraph1: 'AI4ALL Armenia was born from a vision to democratize AI education across Armenia. Through the strategic collaboration between the Enterprise Incubator Foundation (EIF) and the global AI4ALL movement, we\'re creating unprecedented opportunities for Armenian youth and educators.',
+    storyParagraph2: 'Launched in November 2024, our initiative recognizes that Armenia\'s rapidly evolving tech landscape demands AI literacy. We\'re not just teaching technology—we\'re fostering a human-centered, ethical approach to AI that positions Armenia as a regional leader in responsible innovation.',
+    storyParagraph3: 'Our commitment extends beyond urban centers to reach every region of Armenia, ensuring that geography doesn\'t determine access to world-class AI education. We believe that the future of Armenia depends on empowering its people with the skills and knowledge to thrive in an AI-driven world.',
+    
+    // Mission and Vision
+    missionText: 'To democratize AI education in Armenia by empowering youth (15-29) and teachers across all regions with essential AI skills, addressing workforce demands and fostering ethical innovation.',
+    visionText: 'To cultivate a new generation of AI changemakers in Armenia, promoting diversity, ethical innovation, and contributing to the nation\'s digital transformation.',
+    
+    // About Goals
+    goals: 'Our Goals',
+    skillDevelopment: 'Skill Development',
+    skillDevelopmentDesc: 'Equip youth and teachers with future-ready AI skills to meet workforce demands in the ICT/high-tech sector.',
+    educatorEmpowerment: 'Educator Empowerment',
+    educatorEmpowermentDesc: 'Enable teachers to integrate AI tools into their pedagogy for enhanced classroom efficiency and modern teaching approaches.',
+    innovationEcosystem: 'Innovation Ecosystem',
+    innovationEcosystemDesc: 'Foster a vibrant, inclusive AI innovation ecosystem across all Armenian regions.',
+    industryBridge: 'Industry Bridge',
+    industryBridgeDesc: 'Bridge the gap between academic knowledge and industry needs for practical, applicable skills.',
+    regionalLeadership: 'Regional Leadership',
+    regionalLeadershipDesc: 'Contribute to Armenia\'s reputation as a regional tech leader through AI education excellence.',
+    
+    // About Values
+    values: 'Our Values',
+    inclusivity: 'Inclusivity',
+    inclusivityDesc: 'Ensuring AI education reaches every region and community in Armenia.',
+    innovation: 'Innovation',
+    innovationDesc: 'Fostering creative problem-solving and cutting-edge AI applications.',
+    empowerment: 'Empowerment',
+    empowermentDesc: 'Giving individuals the tools and knowledge to shape their futures.',
+    collaboration: 'Collaboration',
+    collaborationDesc: 'Building strong partnerships between education, industry, and government.',
+    
+    // Programs Page
+    programsPageTitle: 'Our Programs',
+    programsPageSubtitle: 'Comprehensive AI education tailored for different audiences',
+    teacherProgramTitle: 'AI for Teachers',
+    teacherProgramSubtitle: 'Empowering Educators with AI Tools',
+    teacherProgramDesc: 'Transform your teaching approach with cutting-edge AI tools designed for modern pedagogy.',
+    youthProgramTitle: 'AI for Youth',
+    youthProgramSubtitle: 'Building Tomorrow\'s AI Leaders',
+    youthProgramDesc: 'Develop essential AI skills for future-ready careers in technology.',
+    
+    // Programs Hero Section
+    programsHeroTitle: 'Our Programs',
+    programsHeroSubtitle: 'Choose the program that fits your goals and start your AI journey today.',
+    
+    // Teacher Program Detailed
+    teacherProgramDescription: 'Transform your teaching approach with cutting-edge AI tools designed for modern pedagogy.',
+    
+    // Teacher Program Modules
+    teacherModule1: 'AI-Powered Lesson Planning',
+    teacherModule2: 'Automated Test & Assessment Generation',
+    teacherModule3: 'AI for Classroom Management & Efficiency',
+    teacherModule4: 'Ethical AI in Education',
+    teacherModule5: 'Data-Driven Student Progress Analysis',
+    teacherModule6: 'AI Tools for Content Creation',
+    teacherModule7: 'Personalized Learning with AI',
+    teacherModule8: 'AI-Assisted Grading Systems',
+    
+    // Teacher Program Benefits
+    teacherBenefit1: 'Enhanced professional development',
+    teacherBenefit2: 'Increased classroom efficiency',
+    teacherBenefit3: 'Modern pedagogical approaches',
+    teacherBenefit4: 'Leadership in technology integration',
+    teacherBenefit5: 'Improved student engagement',
+    teacherBenefit6: 'Data-driven teaching decisions',
+    
+    // Teacher Program Eligibility
+    teacherEligibility1: 'Age up to 29 years',
+    teacherEligibility2: 'Current or future teacher in Armenia',
+    teacherEligibility3: 'Basic computer literacy',
+    teacherEligibility4: 'Commitment to complete the program',
+    teacherEligibility5: 'Interest in educational technology',
+    
+    // Teacher Program Structure
+    teacherDuration: '8-week intensive program',
+    teacherFormat: 'Blended learning: online modules + live virtual workshops',
+    teacherSchedule: 'Evenings and weekends to accommodate teaching schedules',
+    teacherCertification: 'AI4ALL Armenia Teacher Certificate',
+    
+    // Youth Program Modules
+    youthModule1: 'Introduction to AI & Machine Learning',
+    youthModule2: 'Python for Data Science',
+    youthModule3: 'Fundamentals of Deep Learning',
+    youthModule4: 'Natural Language Processing Basics',
+    youthModule5: 'Computer Vision Essentials',
+    youthModule6: 'Ethical AI & Societal Impact',
+    youthModule7: 'Hands-on Project Development',
+    youthModule8: 'AI in Industry Applications',
+    
+    // Youth Program Benefits
+    youthBenefit1: 'Highly sought-after technical skills',
+    youthBenefit2: 'Enhanced critical thinking abilities',
+    youthBenefit3: 'Problem-solving skill development',
+    youthBenefit4: 'Career pathways in diverse AI fields',
+    youthBenefit5: 'Access to professional networks',
+    youthBenefit6: 'Portfolio of real-world projects',
+    
+    // Youth Program Eligibility
+    youthEligibility1: 'Age 15-29 years',
+    youthEligibility2: 'Residing in Armenia',
+    youthEligibility3: 'High school diploma or equivalent',
+    youthEligibility4: 'Basic programming knowledge (preferred)',
+    youthEligibility5: 'Commitment to complete the program',
+    
+    // Youth Program Structure
+    youthDuration: '12-week foundational course + 6-month advanced track',
+    youthFormat: 'Interactive lectures, coding labs, group projects',
+    youthSchedule: 'Weekend sessions and online modules',
+    youthCertification: 'AI4ALL Armenia Youth Certificate',
+    
+    // Programs Page Section Titles
+    learnMoreTeachers: 'Learn More About Teachers Program',
+    learnMoreYouth: 'Learn More About Youth Program',
+    applyNowTeachers: 'Apply Now - Teachers',
+    applyNowYouth: 'Apply Now - Youth',
+    frequentlyAskedQuestions: 'Frequently Asked Questions',
+    
+    // FAQ Questions and Answers
+    faqQuestion1: 'What are the technical requirements for the programs?',
+    faqAnswer1: 'You need a computer with internet access, basic software that we\'ll help you install, and enthusiasm to learn. We provide all necessary learning materials and software licenses.',
+    faqQuestion2: 'How much time commitment is required?',
+    faqAnswer2: 'Teachers program: 6-8 hours per week. Youth program: 10-12 hours per week. We understand participants have other commitments, so the schedule is flexible.',
+    faqQuestion3: 'Are there any fees for the programs?',
+    faqAnswer3: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF. This includes all materials, software, and certification.',
+    faqQuestion4: 'What certification do I receive upon completion?',
+    faqAnswer4: 'Graduates receive an AI4ALL Armenia certificate recognized by local tech companies and educational institutions. We also provide LinkedIn certificates and portfolio development support.',
+    faqQuestion5: 'Can I participate if I live outside Yerevan?',
+    faqAnswer5: 'Absolutely! Our programs are designed to reach all regions of Armenia. Most content is delivered online, with some regional workshops and meetups.',
+    faqQuestion6: 'What job opportunities are available after completion?',
+    faqAnswer6: 'Graduates find opportunities in AI development, data analysis, educational technology, and more. We provide career guidance and connections to our partner companies.',
+    
+    // Contact Section
+    contactTitle: 'Get in Touch',
+    contactSubtitle: 'Have questions about our programs? We\'re here to help!',
+    name: 'Name',
+    email: 'Email',
+    subject: 'Subject',
+    inquiryType: 'Inquiry Type',
+    message: 'Message',
+    sendMessage: 'Send Message',
+    followUs: 'Follow Us',
+    followUsDescription: 'Stay connected with AI4ALL Armenia on social media for the latest updates, success stories, and community highlights.',
+    ourLocation: 'Our Location',
+    interactiveMapSoon: 'Interactive map coming soon',
+    quickAnswers: 'Quick Answers',
+    partnershipOpportunities: 'Partnership Opportunities',
+    partnershipDescription: 'We\'re always looking for organizations that share our vision of democratizing AI education in Armenia. Partner with us to expand our impact.',
+    mediaInquiries: 'Media Inquiries',
+    mediaDescription: 'Media professionals can contact us for interviews, press releases, and access to program information and participant stories.',
+    
+    // Teacher Program Page
+    teachersTrained: 'Teachers Trained',
+    programModules: 'Program Modules',
+    satisfactionRate: 'Satisfaction Rate',
+    schoolsImpacted: 'Schools Impacted',
+    whyChooseAI4ALL: 'Why Choose AI4ALL Armenia for Teachers?',
+    whyChooseDescription: 'Our teacher programs are designed by educators, for educators, with practical applications you can implement immediately.',
+    enhancedTeachingMethods: 'Enhanced Teaching Methods',
+    enhancedTeachingDescription: 'Learn innovative AI-powered teaching techniques that improve student engagement and learning outcomes.',
+    increasedEfficiency: 'Increased Efficiency',
+    increasedEfficiencyDescription: 'Automate routine tasks like grading and feedback, freeing up time for meaningful student interaction.',
+    personalizedLearning: 'Personalized Learning',
+    personalizedLearningDescription: 'Create customized learning experiences that adapt to each student\'s pace and learning style.',
+    futureReadySkills: 'Future-Ready Skills',
+    futureReadySkillsDescription: 'Prepare students for an AI-driven world by integrating cutting-edge technology into your curriculum.',
+    availablePrograms: 'Available Programs',
+    allLevels: 'All Levels',
+    allDurations: 'All Durations',
+    readyToTransform: 'Ready to Transform Your Teaching?',
+    readyToTransformDescription: 'Join hundreds of Armenian educators who are already using AI to enhance their teaching effectiveness and student engagement. Start your journey today.',
+    beginner: 'Beginner',
+    intermediate: 'Intermediate',
+    advanced: 'Advanced',
+    participants: 'participants',
+    certified: 'Certified',
+    viewDetails: 'View Details',
+    hideDetails: 'Hide Details',
+    apply: 'Apply',
+    learningObjectives: 'Learning Objectives',
+    requirements: 'Requirements',
+    curriculum: 'Curriculum',
+    upcomingSessions: 'Upcoming Sessions',
+    spotsLeft: 'spots left',
+    teacherSuccessStories: 'Teacher Success Stories',
+    teacherSuccessDescription: 'Hear from educators who have transformed their teaching with AI tools and methods.',
+    
+    // Contact Page FAQs
+    faqHow: 'How can I apply for AI4ALL Armenia programs?',
+    faqHowAnswer: 'You can apply through our online application portal. Visit our Programs page to learn more about eligibility and application deadlines.',
+    faqFees: 'Are there any fees for the programs?',
+    faqFeesAnswer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF.',
+    faqOutside: 'Can I participate if I live outside Yerevan?',
+    faqOutsideAnswer: 'Absolutely! Our programs are designed to reach all regions of Armenia with online delivery and regional workshops.',
+    faqTech: 'What technical requirements do I need?',
+    faqTechAnswer: 'You need a computer with internet access and basic software that we\'ll help you install.',
+    
+    // Contact Form
+    yourFullName: 'Your full name',
+    yourEmail: 'your@email.com',
+    briefSubject: 'Brief subject line',
+    tellUsMore: 'Tell us more about your inquiry...',
+    sending: 'Sending...',
+    thankYouMessage: 'Thank you for your message! We will get back to you soon.',
+    
+    // Inquiry Types
+    generalInquiry: 'General Inquiry',
+    programInformation: 'Program Information',
+    applicationSupport: 'Application Support',
+    partnershipInquiries: 'Partnership Opportunities',
+    technicalSupport: 'Technical Support',
+    
+    // Partnership Section
+    corporatePartnerships: 'Corporate partnerships and sponsorships',
+    educationalCollaborations: 'Educational institution collaborations',
+    technologyProviders: 'Technology provider partnerships',
+    mentorshipOpportunities: 'Mentorship and speaker opportunities',
+    
+    // Media Contact
+    mediaContact: 'Media Contact',
+    responseTime: 'Response time: Within 2 hours during business hours',
+    
+    // Contact Info Cards
+    contactEmail: 'Email',
+    emailDescription: 'Send us an email and we\'ll respond within 24 hours',
+    contactPhone: 'Phone',
+    phoneDescription: 'Call us during business hours',
+    contactOffice: 'Office',
+    officeAddress: '21/1 Bagrevand Street, Yerevan, Armenia 0062',
+    contactHours: 'Hours',
+    businessHours: 'Mon - Fri: 9AM - 6PM',
+    armeniaTime: 'Armenia Time (GMT+4)',
+    
+    // News Page
+    newsEventsTitle: 'News & Events',
+    newsEventsSubtitle: 'Stay updated with the latest developments, stories, and opportunities from AI4ALL Armenia.',
+    featuredStories: 'Featured Stories',
+    featuredStoriesDescription: 'Highlighting the most impactful stories from our AI education initiative.',
+    allUpdates: 'All Updates',
+    allUpdatesDescription: 'Browse all news, events, and announcements from AI4ALL Armenia.',
+    filterAll: 'All',
+    filterNews: 'News',
+    filterEvents: 'Events',
+    filterAnnouncements: 'Announcements',
+    register: 'Register',
+    stayInTheLoop: 'Stay In The Loop',
+    newsletterDescription: 'Subscribe to our newsletter for the latest updates on programs, events, and success stories.',
+    enterEmail: 'Enter your email',
+    subscribe: 'Subscribe',
+    
+    // Article Page
+    backToNews: 'Back to News',
+    share: 'Share',
+    shareThisArticle: 'Share this article',
+    linkCopied: 'Link copied!',
+    copyLink: 'Copy link',
+    tags: 'Tags:',
+    relatedArticles: 'Related Articles',
+    articleNotFound: 'Article Not Found',
+    articleNotFoundDescription: 'The article you\'re looking for doesn\'t exist.',
     
     // Footer
-    poweredBy: 'Enterprise Incubator Foundation',
-    scrollToExplore: 'Scroll to explore',
+    poweredBy: 'Powered by Enterprise Incubator Foundation',
+    allRightsReserved: 'All rights reserved',
+    footerDescription: 'Democratizing AI education in Armenia by empowering youth (15-29) and teachers across all regions with essential AI skills. An initiative by the Enterprise Incubator Foundation (EIF).',
+    footerPrograms: 'Programs',
+    footerResources: 'Resources',
+    footerSupport: 'Support',
+    footerOurStory: 'Our Story',
+    footerOurGoals: 'Our Goals',
+    footerOurValues: 'Our Values',
+    footerPartnership: 'Partnership',
+    footerSuccessStories: 'Success Stories',
+    footerNewsEvents: 'News & Events',
+    footerFaq: 'FAQ',
+    footerContactUs: 'Contact Us',
+    footerMediaInquiries: 'Media Inquiries',
+    footerPartnershipOpportunities: 'Partnership Opportunities',
+    
+    // EIF Partnership Section
+    eifPartnershipTitle: 'The EIF Partnership',
+    eifPartnershipDescription: 'AI4ALL Armenia is powered by the Enterprise Incubator Foundation\'s commitment to advancing Armenia\'s technological future.',
+    armeniaTechInitiativeTitle: 'Armenia Tech Development Initiative',
+    armeniaTechInitiativeDescription: 'Through EIF\'s comprehensive approach, this initiative aims to equip thousands of youth aged 15-29 with in-demand skills across key sectors:',
+    ictHighTech: 'ICT/High-Tech: Including AI, software development, and digital skills',
+    agriculture: 'Agriculture: Modern farming techniques and agtech innovation',
+    hospitality: 'Hospitality: Tourism and service industry skills',
+    ourRoleTitle: 'Our Role in the Ecosystem',
+    ourRoleDescription1: 'AI4ALL Armenia specifically addresses the growing demand for AI literacy within the ICT/high-tech sector focus of the broader workforce development initiative.',
+    ourRoleDescription2: 'By partnering with the global AI4ALL organization, we bring world-class AI education methodologies to Armenia while ensuring they\'re adapted to local needs and contexts.',
+    ourRoleDescription3: 'This strategic alignment ensures that our AI education efforts contribute directly to Armenia\'s economic development goals and regional competitiveness in the technology sector.',
+    
+    // Program Comparison Table
+    chooseYourPath: 'Choose Your Path',
+    programComparisonDescription: 'Both programs are designed to provide comprehensive AI education tailored to your specific needs and career goals.',
+    feature: 'Feature',
+    duration: 'Duration',
+    ageRange: 'Age Range',
+    schedule: 'Schedule',
+    focus: 'Focus',
+    prerequisites: 'Prerequisites',
+    teachingBackground: 'Teaching Background',
+    technicalAISkills: 'Technical AI Skills',
+    educationalAITools: 'Educational AI Tools',
+    eveningsWeekends: 'Evenings & Weekends',
+    weekendsOnline: 'Weekends & Online',
+    highSchoolDiploma: 'High School Diploma',
+    
+    // Call-to-Action Section
+    readyToStart: 'Ready to Start Your AI Journey?',
+    joinHundreds: 'Join hundreds of Armenian youth and teachers who are already transforming their futures with AI.',
+    haveQuestions: 'Have Questions?',
+    
+    // Page-specific content placeholders
+    newsPageTitle: 'News & Updates',
+    newsPageDescription: 'Stay informed about the latest developments in AI4ALL Armenia',
+    contactPageTitle: 'Contact Us',
+    contactPageDescription: 'Get in touch with our team',
+    teachersPageTitle: 'AI for Teachers Program',
+    teachersPageDescription: 'Comprehensive AI education for educators',
+    youthPageTitle: 'AI for Youth Program', 
+    youthPageDescription: 'Future-ready AI skills for young leaders',
+    applyPageTitle: 'Apply Now',
+    applyPageDescription: 'Start your application for AI4ALL Armenia programs',
+    impactPageTitle: 'Our Impact',
+    impactPageDescription: 'See how AI4ALL Armenia is transforming lives and communities',
+    
+    // Common
+    loading: 'Loading...',
+    error: 'Error',
+    backToHome: 'Back to Home',
+    pageNotFound: 'Page Not Found',
+    comingSoon: 'Coming Soon',
+    
+    // Registration Pages
+    registrationSuccess: 'Registration Successful!',
+    registrationSuccessMessage: 'Thank you for registering for the Armenian Teachers AI Workshop. We will contact you soon with more details.',
+    backToEvents: 'Back to Events',
+    workshopDetails: 'Workshop Details',
+    workshopDate: 'Date',
+    workshopTime: 'Time',
+    workshopLocation: 'Location',
+    workshopParticipants: 'Participants',
+    registrationForm: 'Registration Form',
+    regFirstName: 'First Name',
+    regLastName: 'Last Name',
+    regEmail: 'Email',
+    regPhone: 'Phone',
+    regSchool: 'School/Institution',
+    teachingExperience: 'Teaching Experience',
+    subjectsTeach: 'Subjects You Teach',
+    aiExperience: 'AI Experience Level',
+    learningExpectations: 'What do you hope to learn?',
+    heardAbout: 'How did you hear about us?',
+    registerNow: 'Register Now',
+    regSubmitting: 'Submitting...',
+    regRequired: 'Required',
+    experienceYears: 'years',
+    upTo50Teachers: 'Up to 50 teachers',
+    eifTechCenter: 'EIF Technology Center, Yerevan',
+    august10: 'August 10, 2025',
+    time10to16: '10:00 - 16:00',
+    aiExperienceNone: 'No experience',
+    aiExperienceBasic: 'Basic (heard about AI)',
+    aiExperienceIntermediate: 'Intermediate (used some tools)',
+    aiExperienceAdvanced: 'Advanced (regular AI user)',
   },
   
   hy: {
@@ -39,31 +485,479 @@ export const translations = {
     about: 'Մեր մասին',
     programs: 'Ծրագրեր',
     impact: 'Ազդեցություն',
-    news: 'Նորություններ և իրադարձություններ',
+    news: 'Նորություններ',
     contact: 'Կապ',
     applyNow: 'Գրանցվել',
     
+    // Language Selector
+    language: 'Լեզու',
+    english: 'Անգլերեն',
+    armenian: 'Հայերեն',
+    russian: 'Ռուսերեն',
+    
     // Hero Section
+    heroFoundation: 'Ձեռնարկությունների ինկուբատոր հիմնադրամ',
     heroTitle: 'AI4ALL Հայաստան:',
     heroSubtitle: 'Զորացնում ենք մեր ազգի ապագան',
     heroTagline: 'AI-ի միջոցով',
     heroDescription: 'Նախաձեռնություն, որը բերում է ծանուցակիցների, մարդկակենտրոն AI կրթությունը Հայաստանի բոլոր մարզերում:',
     explorePrograms: 'Ուսումնասիրել ծրագրերը',
+    scrollToExplore: 'Ոլորեք՝ ուսումնասիրելու համար',
     
-    // Programs
-    allPrograms: 'Բոլոր ծրագրերը',
-    forTeachers: 'Ուսուցիչների համար',
-    forYouth: 'Երիտասարդների համար',
+    // Impact Stats
+    participantsEmpowered: 'Զորացված մասնակիցներ',
+    regionsReached: 'Հասարակ մարզեր',
+    programsCompleted: 'Ավարտված ծրագրեր',
+    successRate: 'Հաջողության տոկոս',
     
-    // Stats
-    studentsLabel: 'Վերապատրաստված ուսանողներ',
-    teachersLabel: 'Հավաստագրված ուսուցիչներ',
-    schoolsLabel: 'Գործակից դպրոցներ',
-    regionsLabel: 'Ծածկված մարզեր',
+    // Why AI4ALL Armenia Section
+    whyAI4ALL: 'Ինչու՞ AI4ALL Հայաստան',
+    whyDescription: 'Հայաստանի տեխնոլոգիական լանդշաֆտը արագ զարգանում է, և AI գրամոտությունը կարևոր է ապագայի պատրաստության համար: Մեր ծրագիրը լրացնում է հմտությունների բացերը, խթանում նորարարությունը և նպաստում բարիգիտական AI զարգացմանը բոլոր մարզերում:',
+    inclusiveAccess: 'Ներառական հասանելիություն',
+    inclusiveDescription: 'Հասնել երիտասարդներին և ուսուցիչներին Հայաստանի բոլոր 11 մարզերում, ապահովելով, որ ոչ ոք չմնա AI հեղափոխությունից դուրս:',
+    practicalSkills: 'Գործնական հմտություններ',
+    practicalDescription: 'Գործնական ուսուցում իրական կիրառումներով, մասնակիցներին պատրաստելով անմիջական ազդեցության համար իրենց կարիերայում և համայնքներում:',
+    ethicalFoundation: 'Բարիգիտական հիմունք',
+    ethicalDescription: 'Շեշտադրումը մարդկակենտրոն, բարիգիտական AI զարգացման վրա՝ ապահովելու պատասխանատու նորարարությունը և սոցիալական օգուտը:',
+    
+    // Testimonials Section
+    testimonialsSectionTitle: 'AI4ALL Հայաստանի ձայները',
+    testimonialsSectionSubtitle: 'Լսեք մեր մասնակիցներից նրանց փոխակերպիչ ճանապարհորդության մասին AI4ALL Հայաստանի հետ:',
+    participantStory: 'Մասնակցի պատմություն',
+    readAllStories: 'Կարդալ բոլոր պատմությունները',
+    
+    // Events Section
+    upcomingEventsSubtitle: 'Մնացեք տեղեկացված մեր վերջին իրադարձությունների, սեմինարների և ծրագրային հայտարարությունների մասին:',
+    viewAllNews: 'Տեսնել բոլոր նորությունները և իրադարձությունները',
+    
+    // Programs Section
+    programsTitle: 'Մեր ծրագրերը',
+    programsSubtitle: 'Ընտրեք ծրագիրը, որը համապատասխանում է ձեր նպատակներին և սկսեք ձեր AI ճանապարհորդությունը այսօր',
+    aiForTeachers: 'AI ուսուցիչների համար',
+    aiForYouth: 'AI երիտասարդների համար',
+    teachersDescription: 'Զորացրեք մանկավարժներին AI գործիքներով ժամանակակից մանկավարժության և բարելավված դասարանային արդյունավետության համար:',
+    youthDescription: 'Տրամադրեք երիտասարդ ուսանողներին կարևոր AI հմտություններ ապագայի տեխնոլոգիական կարիերայի համար:',
+    
+    // Teacher Program Features
+    aiPoweredLessons: 'AI-ով աշխատող դասերի պլանավորում',
+    automatedAssessment: 'Ավտոմատացված գնահատում',
+    classroomManagement: 'Դասարանի կառավարում',
+    ethicalAIEducation: 'Բարիգիտական AI կրթություն',
+    
+    // Youth Program Features
+    pythonDataScience: 'Python տվյալների գիտության համար',
+    machineLearningBasics: 'Մեքենայական ուսուցման հիմունքներ',
+    deepLearningFundamentals: 'Խորը ուսուցման հիմնական սկզբունքներ',
+    handsOnProjects: 'Գործնական նախագծեր',
+    
+    // Testimonials
+    testimonialsTitle: 'Հաջողության պատմություններ',
+    karineTestimonial: 'AI4ALL Հայաստանը փոխակերպեց իմ ուսուցանման մոտեցումը: Այժմ ես օգտագործում եմ AI գործիքներ գրավիչ դասեր ստեղծելու և ուսանողների առաջընթացը ավելի արդյունավետ գնահատելու համար:',
+    armenTestimonial: 'Ծրագիրը բացեց իմ աչքերը AI-ի հնարավորությունների վրա: Այժմ ես հետապնդում եմ մեքենայական ուսուցման կարիերա AI4ALL Հայաստանի շնորհիվ:',
+    karineRole: 'Ուսուցիչ, Երևան',
+    armenRole: 'Ուսանող, Գյումրի',
+    
+    // Events
+    upcomingEvents: 'Առաջիկա իրադարձություններ',
+    aiTeachersInfoSession: 'AI ուսուցիչների տեղեկատվական նիստ',
+    youthApplicationsOpen: 'Երիտասարդական ծրագրի դիմումները բաց են',
+    aiWorkshopVanadzor: 'AI սեմինար - Վանաձոր',
+    webinar: 'Վեբինար',
+    application: 'Դիմում',
+    workshop: 'Սեմինար',
+    
+    // Program Details
+    programDuration: 'Ծրագրի տևողությունը',
+    keyBenefits: 'Հիմնական առավելությունները',
+    learnMore: 'Իմանալ ավելին',
+    
+    // News Section
+    newsTitle: 'Վերջին նորություններ և թարմացումներ',
+    newsSubtitle: 'Լինեք տեղեկացված մեր վերջին նվաճումների, իրադարձությունների և ծրագրային զարգացումների մասին',
+    readMore: 'Կարդալ ավելին',
+    allNews: 'Բոլոր նորությունները',
+    events: 'Իրադարձություններ',
+    announcements: 'Հայտարարություններ',
+    filterBy: 'Զտել ըստ',
+    
+    // About Section
+    aboutTitle: 'AI4ALL Հայաստանի մասին',
+    aboutHeroTitle: 'AI4ALL Հայաստանի մասին',
+    aboutHeroSubtitle: 'Արհեստական բանականության կրթության ժողովրդավարացում՝ Հայաստանում ԱԲ ոլորտում փոփոխություններ իրականացնողների նոր սերունդ կերտելու համար։',
+    ourStory: 'Մեր պատմությունը',
+    ourMission: 'Մեր առաքելությունը',
+    ourVision: 'Մեր տեսլականը',
+    partnerships: 'Մեր գործակիցները',
+    
+    // About Story Content
+    storyParagraph1: 'AI4ALL Armenia-ն ծնվեց Հայաստանում արհեստական բանականության (ԱԲ) կրթությունը ժողովրդավարացնելու տեսլականից։ «Ձեռնարկությունների ինկուբատոր» հիմնադրամի (ՁԻՀ) և համաշխարհային AI4ALL շարժման միջև ռազմավարական համագործակցության շնորհիվ մենք աննախադեպ հնարավորություններ ենք ստեղծում հայ երիտասարդների և մանկավարժների համար։',
+    storyParagraph2: 'Մեր նախաձեռնությունը, որը մեկնարկել է 2024 թվականի նոյեմբերին, գիտակցում է, որ Հայաստանի արագ զարգացող տեխնոլոգիական լանդշաֆտը պահանջում է ԱԲ ոլորտի գրագիտություն։ Մենք ոչ միայն սովորեցնում ենք տեխնոլոգիաներ, այլև խթանում ենք ԱԲ-ի նկատմամբ մարդակենտրոն և էթիկական մոտեցում, որը Հայաստանը դիրքավորում է որպես պատասխանատու նորարարության տարածաշրջանային առաջատար։',
+    storyParagraph3: 'Մեր հանձնառությունը տարածվում է քաղաքային կենտրոններից դուրս՝ հասնելով Հայաստանի բոլոր մարզեր՝ երաշխավորելով, որ աշխարհագրական դիրքը չի սահմանափակում համաշխարհային մակարդակի ԱԲ կրթության հասանելիությունը։ Մենք հավատում ենք, որ Հայաստանի ապագան կախված է իր ժողովրդին ԱԲ-ի վրա հիմնված աշխարհում զարգանալու համար անհրաժեշտ հմտություններով և գիտելիքներով զինելուց։',
+    
+    // Mission and Vision
+    missionText: 'Ժողովրդավարացնել արհեստական բանականության կրթությունը Հայաստանում՝ հզորացնելով երիտասարդներին (15-29 տարեկան) և ուսուցիչներին բոլոր մարզերում՝ տրամադրելով ԱԲ էական հմտություններ, բավարարելով աշխատուժի պահանջները և խթանելով էթիկական նորարարությունը։',
+    visionText: 'Կերտել Հայաստանում ԱԲ ոլորտում փոփոխություններ իրականացնողների նոր սերունդ՝ խթանելով բազմազանությունը, էթիկական նորարարությունը և նպաստելով երկրի թվային փոխակերպմանը։',
+    
+    // About Goals
+    goals: 'Մեր նպատակները',
+    skillDevelopment: 'Հմտությունների զարգացում',
+    skillDevelopmentDesc: 'Զինել երիտասարդներին և ուսուցիչներին ապագայի ԱԲ հմտություններով՝ ՏՀՏ/բարձր տեխնոլոգիական ոլորտի աշխատուժի պահանջները բավարարելու համար։',
+    educatorEmpowerment: 'Մանկավարժների հզորացում',
+    educatorEmpowermentDesc: 'Հնարավորություն տալ ուսուցիչներին՝ ինտեգրելու ԱԲ գործիքներն իրենց մանկավարժության մեջ՝ դասարանում արդյունավետությունը բարձրացնելու և դասավանդման ժամանակակից մոտեցումներ կիրառելու համար։',
+    innovationEcosystem: 'Նորարարական էկոհամակարգ',
+    innovationEcosystemDesc: 'Խթանել աշխույժ, ներառական ԱԲ նորարարական էկոհամակարգի զարգացումը Հայաստանի բոլոր մարզերում։',
+    industryBridge: 'Կամուրջ դեպի արդյունաբերություն',
+    industryBridgeDesc: 'Կամրջել ակադեմիական գիտելիքների և արդյունաբերության պահանջների միջև առկա բացը՝ գործնական, կիրառելի հմտությունների համար։',
+    regionalLeadership: 'Տարածաշրջանային առաջնորդություն',
+    regionalLeadershipDesc: 'Նպաստել Հայաստանի՝ որպես տարածաշրջանային տեխնոլոգիական առաջատարի հեղինակությանը՝ ԱԲ կրթության գերազանցության միջոցով։',
+    
+    // About Values
+    values: 'Մեր արժեքները',
+    inclusivity: 'Ներառականություն',
+    inclusivityDesc: 'Ապահովել ԱԲ կրթության հասանելիությունը Հայաստանի բոլոր մարզերում և համայնքներում։',
+    innovation: 'Նորարարություն',
+    innovationDesc: 'Խթանել ստեղծարար խնդիրների լուծումը և ԱԲ առաջադեմ կիրառությունները։',
+    empowerment: 'Հզորացում',
+    empowermentDesc: 'Անհատներին տրամադրել գործիքներ և գիտելիքներ՝ իրենց ապագան կերտելու համար։',
+    collaboration: 'Համագործակցություն',
+    collaborationDesc: 'Կառուցել ամուր գործընկերային հարաբերություններ կրթության, արդյունաբերության և կառավարության միջև։',
+    
+    // Programs Page
+    programsPageTitle: 'Մեր ծրագրերը',
+    programsPageSubtitle: 'ԱԲ համապարփակ կրթություն՝ հարմարեցված տարբեր լսարանների համար',
+    teacherProgramTitle: 'AI ուսուցիչների համար',
+    teacherProgramSubtitle: 'Մանկավարժների հզորացում ԱԲ գործիքներով',
+    teacherProgramDesc: 'Փոխակերպե՛ք ձեր դասավանդման մոտեցումը ժամանակակից մանկավարժության համար նախատեսված ԱԲ առաջադեմ գործիքներով։',
+    youthProgramTitle: 'AI երիտասարդների համար',
+    youthProgramSubtitle: 'Ապագայի ԱԲ հմտություններ՝ հաջորդ սերնդի համար',
+    youthProgramDesc: 'ԱԲ կրթության համապարփակ ծրագիր՝ նախատեսված երիտասարդ մտքերը թվային ապագային նախապատրաստելու համար։',
+    
+    // Programs Hero Section
+    programsHeroTitle: 'Մեր ծրագրերը',
+    programsHeroSubtitle: 'Ընտրե՛ք ձեր նպատակներին համապատասխանող ծրագիրը և սկսե՛ք ձեր ԱԲ ճամփորդությունն այսօր։',
+    
+    // Teacher Program Detailed
+    teacherProgramDescription: 'Փոխակերպե՛ք ձեր դասավանդման մոտեցումը ժամանակակից մանկավարժության համար նախատեսված ԱԲ առաջադեմ գործիքներով։',
+    
+    // Teacher Program Modules
+    teacherModule1: 'AI-ի կողմից աջակցվող դասի պլանավորում',
+    teacherModule2: 'Ավտոմատացված թեստերի և գնահատման ստեղծում',
+    teacherModule3: 'AI դասարանի կառավարման և արդյունավետության համար',
+    teacherModule4: 'Էթիկական AI կրթության մեջ',
+    teacherModule5: 'Տվյալների վրա հիմնված ուսանողների առաջընթացի վերլուծություն',
+    teacherModule6: 'AI գործիքներ բովանդակության ստեղծման համար',
+    teacherModule7: 'Անհատականացված ուսուցում AI-ի հետ',
+    teacherModule8: 'AI-ի կողմից աջակցվող գնահատման համակարգեր',
+    
+    // Teacher Program Benefits
+    teacherBenefit1: 'Բարելավված մասնագիտական զարգացում',
+    teacherBenefit2: 'Դասարանի ավելացված արդյունավետություն',
+    teacherBenefit3: 'Ժամանակակից մանկավարժական մոտեցումներ',
+    teacherBenefit4: 'Առաջնորդություն տեխնոլոգիական ինտեգրման մեջ',
+    teacherBenefit5: 'Բարելավված ուսանողական ներգրավվածություն',
+    teacherBenefit6: 'Տվյալների վրա հիմնված ուսուցման որոշումներ',
+    
+    // Teacher Program Eligibility
+    teacherEligibility1: 'Տարիքը մինչև 29 տարի',
+    teacherEligibility2: 'Ներկայիս կամ ապագա ուսուցիչ Հայաստանում',
+    teacherEligibility3: 'Համակարգչային հիմնական գրագիտություն',
+    teacherEligibility4: 'Պարտավորություն ծրագիրը ավարտելու համար',
+    teacherEligibility5: 'Հետաքրքրություն կրթական տեխնոլոգիաների նկատմամբ',
+    
+    // Teacher Program Structure
+    teacherDuration: '8-շաբաթյա ինտենսիվ ծրագիր',
+    teacherFormat: 'Խառը ուսուցում՝ առցանց մոդուլներ + կենդանի վիրտուալ սեմինարներ',
+    teacherSchedule: 'Երեկոյական և շաբաթածախային ժամեր՝ ուսուցիչների ժամանակացույցին համապատասխանելու համար',
+    teacherCertification: 'AI4ALL Armenia Ուսուցիչի Վկայական',
+    
+    // Youth Program Modules
+    youthModule1: 'AI և մեքենայական ուսուցման ներածություն',
+    youthModule2: 'Python տվյալների գիտության համար',
+    youthModule3: 'Խորը ուսուցման հիմունքներ',
+    youthModule4: 'Բնական լեզվի մշակման հիմունքներ',
+    youthModule5: 'Կոմպյուտերային տեսողության հիմունքներ',
+    youthModule6: 'Էթիկական AI և սոցիալական ազդեցություն',
+    youthModule7: 'Գործնական նախագծի մշակում',
+    youthModule8: 'AI արդյունաբերական կիրառությունների մեջ',
+    
+    // Youth Program Benefits
+    youthBenefit1: 'Բարձր պահանջված տեխնիկական հմտություններ',
+    youthBenefit2: 'Բարելավված քննական մտածողության ունակություններ',
+    youthBenefit3: 'Խնդիրների լուծման հմտությունների զարգացում',
+    youthBenefit4: 'Կարիերայի ուղիներ AI-ի տարբեր ոլորտներում',
+    youthBenefit5: 'Մուտք մասնագիտական ցանցեր',
+    youthBenefit6: 'Իրական աշխարհի նախագծերի պորտֆոլիո',
+    
+    // Youth Program Eligibility
+    youthEligibility1: 'Տարիքը 15-29 տարի',
+    youthEligibility2: 'Բնակությունը Հայաստանում',
+    youthEligibility3: 'Միջնակարգ կրթության վկայական կամ համարժեք',
+    youthEligibility4: 'Ծրագրավորման հիմնական գիտելիքներ (նախընտրելի)',
+    youthEligibility5: 'Պարտավորություն ծրագիրը ավարտելու համար',
+    
+    // Youth Program Structure
+    youthDuration: '12-շաբաթյա հիմնական դասընթաց + 6-ամսյա առաջադեմ ուղղություն',
+    youthFormat: 'Ինտերակտիվ դասախոսություններ, ծրագրավորման լաբորատորիաներ, խմբային նախագծեր',
+    youthSchedule: 'Շաբաթավերջի նիստեր և առցանց մոդուլներ',
+    youthCertification: 'AI4ALL Armenia Երիտասարդների Վկայական',
+    
+    // Programs Page Section Titles
+    learnMoreTeachers: 'Ավելին իմանալ ուսուցիչների ծրագրի մասին',
+    learnMoreYouth: 'Ավելին իմանալ երիտասարդների ծրագրի մասին',
+    applyNowTeachers: 'Դիմել հիմա - Ուսուցիչներ',
+    applyNowYouth: 'Դիմել հիմա - Երիտասարդներ',
+    frequentlyAskedQuestions: 'Հաճախակի տրվող հարցեր',
+    
+    // FAQ Questions and Answers
+    faqQuestion1: 'Որո՞նք են ծրագրերի տեխնիկական պահանջները:',
+    faqAnswer1: 'Դուք պետք է ունենաք համակարգիչ ինտերնետ կապով, հիմնական ծրագրակազմ, որը մենք կօգնենք տեղադրել, և սովորելու ցանկություն: Մենք տրամադրում ենք բոլոր անհրաժեշտ ուսումնական նյութերը և ծրագրային լիցենզիաները:',
+    faqQuestion2: 'Որքա՞ն ժամանակ է պահանջվում:',
+    faqAnswer2: 'Ուսուցիչների ծրագիր՝ շաբաթը 6-8 ժամ: Երիտասարդների ծրագիր՝ շաբաթը 10-12 ժամ: Մենք հասկանում ենք, որ մասնակիցները ունեն այլ պարտավորություններ, այնպես որ ժամանակացույցը ճկուն է:',
+    faqQuestion3: 'Կա՞ն արդյոք վճարներ ծրագրերի համար:',
+    faqAnswer3: 'Ոչ, AI4ALL Armenia-ի բոլոր ծրագրերը լիովին անվճար են EIF-ի աջակցության շնորհիվ: Սա ներառում է բոլոր նյութերը, ծրագրակազմը և վկայավորումը:',
+    faqQuestion4: 'Ի՞նչ վկայական եմ ստանում ավարտելուց հետո:',
+    faqAnswer4: 'Շրջանավարտները ստանում են AI4ALL Armenia վկայական, որը ճանաչված է տեղական տեխնոլոգիական ընկերությունների և կրթական հաստատությունների կողմից: Մենք նաև տրամադրում ենք LinkedIn վկայականներ և պորտֆոլիոյի զարգացման աջակցություն:',
+    faqQuestion5: 'Կարող եմ մասնակցե՞լ, եթե ապրում եմ Երևանից դուրս:',
+    faqAnswer5: 'Անպայման: Մեր ծրագրերը նախագծված են հասնելու Հայաստանի բոլոր մարզերին: Բովանդակության մեծ մասը տրամադրվում է առցանց, որոշ տարածաշրջանային սեմինարներով և հանդիպումներով:',
+    faqQuestion6: 'Ի՞նչ աշխատանքային հնարավորություններ կան ավարտելուց հետո:',
+    faqAnswer6: 'Շրջանավարտները գտնում են հնարավորություններ AI մշակման, տվյալների վերլուծության, կրթական տեխնոլոգիաների և այլ ոլորտներում: Մենք տրամադրում ենք կարիերայի ուղղորդում և կապեր մեր գործընկեր ընկերությունների հետ:',
+    
+    // Contact Section
+    contactTitle: 'Կապվեք մեզ հետ',
+    contactSubtitle: 'Հարցեր ունե՞ք մեր ծրագրերի մասին: Մենք այստեղ ենք օգնելու համար:',
+    name: 'Անուն',
+    email: 'Էլ. փոստ',
+    subject: 'Թեմա',
+    inquiryType: 'Հարցման տեսակ',
+    message: 'Հաղորդագրություն',
+    sendMessage: 'Ուղարկել հաղորդագրությունը',
+    followUs: 'Հետևեք մեզ',
+    followUsDescription: 'Կապակցված մնացեք AI4ALL Armenia-ի հետ սոցիալական ցանցերում՝ ստանալու վերջին թարմացումները, հաջողության պատմությունները և համայնքի գունավոր պահերը:',
+    ourLocation: 'Մեր գտնվելու վայրը',
+    interactiveMapSoon: 'Ինտերակտիվ քարտեզը շուտով',
+    quickAnswers: 'Արագ պատասխաններ',
+    partnershipOpportunities: 'Գործընկերության հնարավորություններ',
+    partnershipDescription: 'Մենք միշտ փնտրում ենք կազմակերպություններ, որոնք կիսում են մեր տեսլականը՝ ժողովրդականացնել AI կրթությունը Հայաստանում: Գործընկերություն կնքեք մեզ հետ՝ ընդլայնելու մեր ազդեցությունը:',
+    mediaInquiries: 'Լրատվական հարցումներ',
+    mediaDescription: 'Լրատվության ներկայացուցիչները կարող են կապվել մեզ հետ հարցազրույցների, մամուլի հաղորդագրությունների և ծրագրերի տեղեկատվության ու մասնակիցների պատմությունների հասանելիության համար:',
+    
+    // Teacher Program Page
+    teachersTrained: 'Ուսուցիչներ վերապատրաստված',
+    programModules: 'Ծրագրային մոդուլներ',
+    satisfactionRate: 'Բավարարվածության տոկոս',
+    schoolsImpacted: 'Դպրոցներ ազդված',
+    whyChooseAI4ALL: 'Ինչու՞ ընտրել AI4ALL Armenia-ն ուսուցիչների համար:',
+    whyChooseDescription: 'Մեր ուսուցիչների ծրագրերը մշակված են մանկավարժների կողմից՝ մանկավարժների համար, գործնական կիրառություններով, որոնք կարող եք անմիջապես կիրառել:',
+    enhancedTeachingMethods: 'Բարելավված ուսուցանման մեթոդներ',
+    enhancedTeachingDescription: 'Սովորեք AI-ով աշխատող նորարարական ուսուցանման տեխնիկաներ, որոնք բարելավում են ուսանողների ներգրավվածությունը և ուսումնական արդյունքները:',
+    increasedEfficiency: 'Ավելացված արդյունավետություն',
+    increasedEfficiencyDescription: 'Ավտոմատացրեք առօրյա խնդիրները, ինչպիսիք են գնահատումը և հետադարձ կապը՝ ազատելով ժամանակ ուսանողների հետ իմաստալից փոխազդեցության համար:',
+    personalizedLearning: 'Անհատականացված ուսուցում',
+    personalizedLearningDescription: 'Ստեղծեք հարմարեցված ուսուցանման փորձառություններ, որոնք հարմարվում են յուրաքանչյուր ուսանողի տեմպին և ուսուցանման ոճին:',
+    futureReadySkills: 'Ապագայի համար պատրաստ հմտություններ',
+    futureReadySkillsDescription: 'Պատրաստեք ուսանողներին AI-ով կառավարվող աշխարհի համար՝ ինտեգրելով ձեր ուսումնական ծրագրում առաջադեմ տեխնոլոգիա:',
+    availablePrograms: 'Հասանելի ծրագրեր',
+    allLevels: 'Բոլոր մակարդակները',
+    allDurations: 'Բոլոր տևողությունները',
+    readyToTransform: 'Պատրաստ ե՞ք փոխակերպել ձեր ուսուցումը:',
+    readyToTransformDescription: 'Միացեք հարյուրավոր հայ մանկավարժների, ովքեր արդեն օգտագործում են AI-ն՝ բարելավելու իրենց ուսուցանման արդյունավետությունը և ուսանողների ներգրավվածությունը: Սկսեք ձեր ուղին այսօր:',
+    beginner: 'Սկսնակ',
+    intermediate: 'Միջին',
+    advanced: 'Առաջադեմ',
+    participants: 'մասնակիցներ',
+    certified: 'Վավերացված',
+    viewDetails: 'Տեսնել մանրամասները',
+    hideDetails: 'Թաքցնել մանրամասները',
+    apply: 'Դիմել',
+    learningObjectives: 'Ուսուցանման նպատակներ',
+    requirements: 'Պահանջներ',
+    curriculum: 'Ուսումնական ծրագիր',
+    upcomingSessions: 'Առաջիկա նիստեր',
+    spotsLeft: 'տեղեր մնացել են',
+    teacherSuccessStories: 'Ուսուցիչների հաջողության պատմություններ',
+    teacherSuccessDescription: 'Լսեք մանկավարժներից, ովքեր փոխակերպել են իրենց ուսուցումը AI գործիքներով և մեթոդներով:',
+    
+    // Contact Page FAQs
+    faqHow: 'Ինչպե՞ս կարող եմ դիմել AI4ALL Armenia ծրագրերին:',
+    faqHowAnswer: 'Կարող եք դիմել մեր օնլայն դիմումի կայքի միջոցով: Այցելեք մեր Ծրագրեր էջը՝ իմանալու հավակնությունների և դիմումի ժամկետների մասին:',
+    faqFees: 'Ծրագրերի համար վճարներ կա՞ն:',
+    faqFeesAnswer: 'Ոչ, AI4ALL Armenia-ի բոլոր ծրագրերը ամբողջությամբ անվճար են՝ EIF-ի աջակցության շնորհիվ:',
+    faqOutside: 'Կարո՞ղ եմ մասնակցել, եթե ապրում եմ Երևանից դուրս:',
+    faqOutsideAnswer: 'Անպայման: Մեր ծրագրերը նախագծված են հասնելու Հայաստանի բոլոր մարզերին՝ օնլայն առաքման և մարզային արտադասարանների միջոցով:',
+    faqTech: 'Ինչ տեխնիկական պահանջներ են ինձ հարկավոր:',
+    faqTechAnswer: 'Ձեզ հարկավոր է համակարգիչ ինտերնետ հասանելիությամբ և հիմնական ծրագրակազմ, որը մենք կօգնենք տեղադրել:',
+    
+    // Contact Form
+    yourFullName: 'Ձեր լրիվ անունը',
+    yourEmail: 'ձեր@էլեկտրոնային.հասցե',
+    briefSubject: 'Կարճ թեմա',
+    tellUsMore: 'Պատմեք մեզ ավելին ձեր հարցման մասին...',
+    sending: 'Ուղարկվում է...',
+    thankYouMessage: 'Շնորհակալություն ձեր հաղորդագրության համար: Մենք շուտով կկապվենք ձեզ հետ:',
+    
+    // Inquiry Types
+    generalInquiry: 'Ընդհանուր հարցում',
+    programInformation: 'Ծրագրի տեղեկություններ',
+    applicationSupport: 'Դիմումի աջակցություն',
+    partnershipInquiries: 'Գործընկերության հնարավորություններ',
+    technicalSupport: 'Տեխնիկական աջակցություն',
+    
+    // Partnership Section
+    corporatePartnerships: 'Կորպորատիվ գործընկերություններ և հովանավորություններ',
+    educationalCollaborations: 'Կրթական հաստատությունների համագործակցություն',
+    technologyProviders: 'Տեխնոլոգիական մատակարարների գործընկերություն',
+    mentorshipOpportunities: 'Մենթորություն և հանդիսախոսների հնարավորություններ',
+    
+    // Media Contact
+    mediaContact: 'Մեդիա կապ',
+    responseTime: 'Պատասխանի ժամանակ: 2 ժամվա ընթացքում աշխատանքային ժամերին',
+    
+    // Contact Info Cards
+    contactEmail: 'Էլեկտրոնային փոստ',
+    emailDescription: 'Ուղարկեք մեզ էլեկտրոնային նամակ և մենք կպատասխանենք 24 ժամվա ընթացքում',
+    contactPhone: 'Հեռախոս',
+    phoneDescription: 'Զանգահարեք մեզ աշխատանքային ժամերին',
+    contactOffice: 'Գրասենյակ',
+    officeAddress: 'Բագրևանդի 21/1, Երևան, Հայաստան 0062',
+    contactHours: 'Ժամերը',
+    businessHours: 'Երկ - Ուրբ: 9:00 - 18:00',
+    armeniaTime: 'Հայաստանի ժամանակ (GMT+4)',
+    
+    // News Page
+    newsEventsTitle: 'Նորություններ և իրադարձություններ',
+    newsEventsSubtitle: 'Տեղյակ մնացեք AI4ALL Armenia-ի վերջին զարգացումներից, պատմություններից և հնարավորություններից:',
+    featuredStories: 'Բարդիք պատմություններ',
+    featuredStoriesDescription: 'Մեր AI կրթական նախաձեռնության ամենազգայուն պատմությունների գունդն արտացոլում:',
+    allUpdates: 'Բոլոր թարմացումները',
+    allUpdatesDescription: 'Դիտեք AI4ALL Armenia-ի բոլոր նորություններն, իրադարձությունները և հայտարարությունները:',
+    filterAll: 'Բոլորը',
+    filterNews: 'Նորություններ',
+    filterEvents: 'Իրադարձություններ',
+    filterAnnouncements: 'Հայտարարություններ',
+    register: 'Գրանցվել',
+    stayInTheLoop: 'Մնացեք կապի մեջ',
+    newsletterDescription: 'Բաժանորդագրվեք մեր նյութագրին՝ ծրագրերի, իրադարձությունների և հաջողության պատմությունների վերջին թարմացումների համար:',
+    enterEmail: 'Մուտքագրեք ձեր էլ. հասցեն',
+    subscribe: 'Բաժանորդագրվել',
+    
+    // Article Page
+    backToNews: 'Վերադարձ դեպի նորություններ',
+    share: 'Կիսվել',
+    shareThisArticle: 'Կիսվել այս հոդվածով',
+    linkCopied: 'Հղումը պատճենված է!',
+    copyLink: 'Պատճենել հղումը',
+    tags: 'Պիտակներ:',
+    relatedArticles: 'Նմանատիպ հոդվածներ',
+    articleNotFound: 'Հոդվածը չի գտնվել',
+    articleNotFoundDescription: 'Այն հոդվածը, որը փնտրում եք, գոյություն չունի:',
     
     // Footer
-    poweredBy: 'Ձեռնարկատիրական ինկուբատորի հիմնադրամ',
-    scrollToExplore: 'Ոլորեք՝ ուսումնասիրելու համար',
+    
+    // Footer
+    poweredBy: 'Իրականացվում է Ձեռնարկությունների ինկուբատոր հիմնադրամի կողմից',
+    allRightsReserved: 'Բոլոր իրավունքները պաշտպանված են',
+    footerDescription: 'AI կրթության ժողովրդականացում Հայաստանում՝ երիտասարդներին (15-29) և ուսուցիչներին բոլոր մարզերում անհրաժեշտ AI հմտություններով զինելով: Ձեռնարկությունների ինկուբատոր հիմնադրամի (EIF) նախաձեռնություն:',
+    footerPrograms: 'Ծրագրեր',
+    footerResources: 'Ռեսուրսներ',
+    footerSupport: 'Աջակցություն',
+    footerOurStory: 'Մեր պատմությունը',
+    footerOurGoals: 'Մեր նպատակները',
+    footerOurValues: 'Մեր արժեքները',
+    footerPartnership: 'Գործընկերություն',
+    footerSuccessStories: 'Հաջողության պատմություններ',
+    footerNewsEvents: 'Նորություններ և իրադարձություններ',
+    footerFaq: 'ՀՏՀ',
+    footerContactUs: 'Կապվեք մեզ հետ',
+    footerMediaInquiries: 'Մեդիա հարցումներ',
+    footerPartnershipOpportunities: 'Գործընկերության հնարավորություններ',
+    
+    // EIF Partnership Section
+    eifPartnershipTitle: 'Գործընկերություն ՁԻՀ-ի հետ',
+    eifPartnershipDescription: 'AI4ALL Armenia-ն իրականացվում է «Ձեռնարկությունների ինկուբատոր» հիմնադրամի՝ Հայաստանի տեխնոլոգիական ապագան առաջ մղելու հանձնառության շնորհիվ։',
+    armeniaTechInitiativeTitle: 'Հայաստանի տեխնոլոգիական զարգացման նախաձեռնություն',
+    armeniaTechInitiativeDescription: 'ՁԻՀ-ի համապարփակ մոտեցման միջոցով այս նախաձեռնությունը նպատակ ունի 15-29 տարեկան հազարավոր երիտասարդների զինել առանցքային ոլորտներում պահանջված հմտություններով՝',
+    ictHighTech: 'ՏՀՏ/Բարձր տեխնոլոգիաներ․ ներառյալ ԱԲ, ծրագրային ապահովման մշակում և թվային հմտություններ',
+    agriculture: 'Գյուղատնտեսություն․ ժամանակակից գյուղատնտեսական տեխնիկաներ և ագրոտեխնոլոգիական նորարարություն',
+    hospitality: 'Հյուրընկալություն․ զբոսաշրջության և սպասարկման ոլորտի հմտություններ',
+    ourRoleTitle: 'Մեր դերն էկոհամակարգում',
+    ourRoleDescription1: 'AI4ALL Armenia-ն ուղղակիորեն արձագանքում է աշխատուժի զարգացման ավելի լայն նախաձեռնության ՏՀՏ/բարձր տեխնոլոգիական ուղղվածության շրջանակում ԱԲ ոլորտի գրագիտության աճող պահանջարկին։',
+    ourRoleDescription2: 'Համագործակցելով համաշխարհային AI4ALL կազմակերպության հետ՝ մենք Հայաստան ենք բերում ԱԲ կրթության համաշխարհային մակարդակի մեթոդաբանություններ՝ միևնույն ժամանակ դրանք հարմարեցնելով տեղական կարիքներին և համատեքստին։',
+    ourRoleDescription3: 'Այս ռազմավարական համադրումը երաշխավորում է, որ ԱԲ կրթության ոլորտում մեր ջանքերն ուղղակիորեն նպաստում են Հայաստանի տնտեսական զարգացման նպատակներին և տեխնոլոգիական ոլորտում տարածաշրջանային մրցունակությանը։',
+    
+    // Program Comparison Table
+    chooseYourPath: 'Ընտրի՛ր քո ուղին',
+    programComparisonDescription: 'Երկու ծրագրերն էլ նախատեսված են ապահովելու ԱԲ ոլորտի համապարփակ կրթություն՝ հարմարեցված ձեր հատուկ կարիքներին և կարիերայի նպատակներին։',
+    feature: 'Առանձնահատկություն',
+    duration: 'Տևողություն',
+    ageRange: 'Տարիքային խումբ',
+    schedule: 'Ժամանակացույց',
+    focus: 'Ուղղվածություն',
+    prerequisites: 'Նախապայմաններ',
+    teachingBackground: 'Մանկավարժական փորձ',
+    technicalAISkills: 'Տեխնիկական ԱԲ հմտություններ',
+    educationalAITools: 'Կրթական ԱԲ գործիքներ',
+    eveningsWeekends: 'Երեկոյան և հանգստյան օրերին',
+    weekendsOnline: 'Հանգստյան օրերին և առցանց',
+    highSchoolDiploma: 'Ավագ դպրոցի դիպլոմ',
+    
+    // Call-to-Action Section
+    readyToStart: 'Պատրաստվու՞մ եք սկսել ձեր ԱԲ ճամփորդությունը։',
+    joinHundreds: 'Միացե՛ք հարյուրավոր հայ երիտասարդների և ուսուցիչների, ովքեր արդեն փոխակերպում են իրենց ապագան ԱԲ-ի միջոցով։',
+    haveQuestions: 'Հարցե՞ր ունեք։',
+    
+    // Page-specific content placeholders
+    newsPageTitle: 'Նորություններ և թարմացումներ',
+    newsPageDescription: 'Տեղեկացե՛ք AI4ALL Armenia-ի վերջին զարգացումներին',
+    contactPageTitle: 'Կապ մեզ հետ',
+    contactPageDescription: 'Կապ հաստատեք մեր թիմի հետ',
+    teachersPageTitle: 'ԱԲ ծրագիր ուսուցիչների համար',
+    teachersPageDescription: 'ԱԲ ոլորտի համապարփակ կրթություն մանկավարժների համար',
+    youthPageTitle: 'ԱԲ ծրագիր երիտասարդների համար', 
+    youthPageDescription: 'Ապագայի ԱԲ հմտություններ երիտասարդ առաջնորդների համար',
+    applyPageTitle: 'Դիմել հիմա',
+    applyPageDescription: 'Սկսե՛ք ձեր դիմումը AI4ALL Armenia-ի ծրագրերի համար',
+    impactPageTitle: 'Մեր ազդեցությունը',
+    impactPageDescription: 'Տեսե՛ք, թե ինչպես է AI4ALL Armenia-ն փոխակերպում կյանքեր և համայնքներ',
+    
+    // Common
+    loading: 'Բեռնվում է...',
+    error: 'Սխալ',
+    backToHome: 'Վերադառնալ գլխավոր էջ',
+    pageNotFound: 'Էջը չի գտնվել',
+    comingSoon: 'Շուտով',
+    
+    // Registration Pages
+    registrationSuccess: 'Գրանցումը հաջողվեց!',
+    registrationSuccessMessage: 'Շնորհակալություն հայ ուսուցիչների ԱԲ աշխատարանին գրանցվելու համար: Մենք շուտով կկապվենք ձեզ հետ ավելի մանրամասն տեղեկություններով:',
+    backToEvents: 'Վերադառնալ միջոցառումներին',
+    workshopDetails: 'Աշխատարանի մանրամասները',
+    workshopDate: 'Ամսաթիվ',
+    workshopTime: 'Ժամ',
+    workshopLocation: 'Վայր',
+    workshopParticipants: 'Մասնակիցներ',
+    registrationForm: 'Գրանցման ձև',
+    regFirstName: 'Անուն',
+    regLastName: 'Ազգանուն',
+    regEmail: 'Էլ․ փոստ',
+    regPhone: 'Հեռախոս',
+    regSchool: 'Դպրոց/Հաստատություն',
+    teachingExperience: 'Դասավանդման փորձ',
+    subjectsTeach: 'Դասավանդվող առարկաներ',
+    aiExperience: 'ԱԲ փորձի մակարդակ',
+    learningExpectations: 'Ի՞նչ եք ակնկալում սովորել:',
+    heardAbout: 'Ինչպե՞ս լսեցիք մեր մասին:',
+    registerNow: 'Գրանցվել հիմա',
+    regSubmitting: 'Ուղարկվում է...',
+    regRequired: 'Պարտադիր',
+    experienceYears: 'տարի',
+    upTo50Teachers: 'Մինչև 50 մանկավարժ',
+    eifTechCenter: 'ԵԻՀ տեխնոլոգիական կենտրոն, Երևան',
+    august10: 'Օգոստոս 10, 2025',
+    time10to16: '10:00 - 16:00',
+    aiExperienceNone: 'Փորձ չունեմ',
+    aiExperienceBasic: 'Սկսնակ (լսել եմ ԱԲ-ի մասին)',
+    aiExperienceIntermediate: 'Միջին (օգտագործել եմ որոշ գործիքներ)',
+    aiExperienceAdvanced: 'Առաջադեմ (կանոնակար օգտագործող)',
   },
   
   ru: {
@@ -72,31 +966,477 @@ export const translations = {
     about: 'О нас',
     programs: 'Программы',
     impact: 'Влияние',
-    news: 'Новости и события',
+    news: 'Новости',
     contact: 'Контакты',
     applyNow: 'Подать заявку',
     
+    // Language Selector
+    language: 'Язык',
+    english: 'Английский',
+    armenian: 'Армянский',
+    russian: 'Русский',
+    
     // Hero Section
+    heroFoundation: 'Фонд предпринимательского инкубатора',
     heroTitle: 'AI4ALL Армения:',
     heroSubtitle: 'Расширяем возможности будущего нашей нации',
     heroTagline: 'с помощью ИИ',
     heroDescription: 'Инициатива, которая приносит передовое, человеко-ориентированное образование по ИИ в каждый регион Армении.',
     explorePrograms: 'Изучить программы',
+    scrollToExplore: 'Прокрутите для изучения',
     
-    // Programs
-    allPrograms: 'Все программы',
-    forTeachers: 'Для учителей',
-    forYouth: 'Для молодежи',
+    // Impact Stats
+    participantsEmpowered: 'Участников расширило возможности',
+    regionsReached: 'Охваченных регионов',
+    programsCompleted: 'Завершенных программ',
+    successRate: 'Процент успеха',
     
-    // Stats
-    studentsLabel: 'Обученных студентов',
-    teachersLabel: 'Сертифицированных учителей',
-    schoolsLabel: 'Школ-партнеров',
-    regionsLabel: 'Охваченных регионов',
+    // Why AI4ALL Armenia Section
+    whyAI4ALL: 'Почему AI4ALL Армения?',
+    whyDescription: 'Технологический ландшафт Армении быстро развивается, и знание ИИ имеет решающее значение для готовности к будущему. Наша программа устраняет пробелы в навыках, способствует инновациям и продвигает этичное развитие ИИ во всех регионах.',
+    inclusiveAccess: 'Инклюзивный доступ',
+    inclusiveDescription: 'Охват молодежи и учителей во всех 11 регионах Армении, обеспечивая, что никто не останется позади в революции ИИ.',
+    practicalSkills: 'Практические навыки',
+    practicalDescription: 'Практическое обучение с реальными приложениями, подготавливающее участников к немедленному воздействию в их карьере и сообществах.',
+    ethicalFoundation: 'Этическая основа',
+    ethicalDescription: 'Акцент на человеко-ориентированном, этичном развитии ИИ для обеспечения ответственных инноваций и общественной пользы.',
+    
+    // Testimonials Section
+    testimonialsSectionTitle: 'Голоса AI4ALL Армения',
+    testimonialsSectionSubtitle: 'Услышьте от наших участников об их трансформационном путешествии с AI4ALL Армения.',
+    participantStory: 'История участника',
+    readAllStories: 'Прочитать все истории',
+    
+    // Events Section
+    upcomingEventsSubtitle: 'Оставайтесь в курсе наших последних мероприятий, семинаров и объявлений о программах.',
+    viewAllNews: 'Просмотреть все новости и события',
+    
+    // Programs Section
+    programsTitle: 'Наши программы',
+    programsSubtitle: 'Выберите программу, которая соответствует вашим целям, и начните свое путешествие в ИИ сегодня',
+    aiForTeachers: 'ИИ для учителей',
+    aiForYouth: 'ИИ для молодежи',
+    teachersDescription: 'Расширьте возможности педагогов с помощью инструментов ИИ для современной педагогики и повышения эффективности в классе.',
+    youthDescription: 'Оснастите молодых учащихся основными навыками ИИ для готовой к будущему карьеры в технологиях.',
+    
+    // Teacher Program Features
+    aiPoweredLessons: 'Планирование уроков на основе ИИ',
+    automatedAssessment: 'Автоматизированная оценка',
+    classroomManagement: 'Управление классом',
+    ethicalAIEducation: 'Этичное образование в области ИИ',
+    
+    // Youth Program Features
+    pythonDataScience: 'Python для науки о данных',
+    machineLearningBasics: 'Основы машинного обучения',
+    deepLearningFundamentals: 'Основы глубокого обучения',
+    handsOnProjects: 'Практические проекты',
+    
+    // Testimonials
+    testimonialsTitle: 'Истории успеха',
+    karineTestimonial: 'AI4ALL Армения изменила мой подход к преподаванию. Теперь я использую инструменты ИИ для создания увлекательных уроков и более эффективной оценки прогресса учащихся.',
+    armenTestimonial: 'Программа открыла мне глаза на возможности ИИ. Теперь я изучаю карьеру в области машинного обучения благодаря AI4ALL Армения.',
+    karineRole: 'Учитель, Ереван',
+    armenRole: 'Студент, Гюмри',
+    
+    // Events
+    upcomingEvents: 'Предстоящие события',
+    aiTeachersInfoSession: 'Информационная сессия ИИ для учителей',
+    youthApplicationsOpen: 'Открыты заявки на молодежную программу',
+    aiWorkshopVanadzor: 'Семинар по ИИ - Ванадзор',
+    webinar: 'Вебинар',
+    application: 'Заявка',
+    workshop: 'Семинар',
+    
+    // Program Details
+    programDuration: 'Продолжительность программы',
+    keyBenefits: 'Ключевые преимущества',
+    learnMore: 'Узнать больше',
+    
+    // News Section
+    newsTitle: 'Последние новости и обновления',
+    newsSubtitle: 'Будьте в курсе наших последних достижений, событий и развития программ',
+    readMore: 'Читать далее',
+    allNews: 'Все новости',
+    events: 'События',
+    announcements: 'Объявления',
+    filterBy: 'Фильтровать по',
+    
+    // About Section
+    aboutTitle: 'О AI4ALL Армения',
+    aboutHeroTitle: 'О AI4ALL Армения',
+    aboutHeroSubtitle: 'Демократизация образования ИИ для воспитания нового поколения агентов изменений ИИ в Армении.',
+    ourStory: 'Наша история',
+    ourMission: 'Наша миссия',
+    ourVision: 'Наше видение',
+    partnerships: 'Наши партнеры',
+    
+    // About Story Content
+    storyParagraph1: 'AI4ALL Армения родилась из видения демократизации образования ИИ по всей Армении. Благодаря стратегическому сотрудничеству между Фондом предпринимательского инкубатора (EIF) и глобальным движением AI4ALL мы создаем беспрецедентные возможности для армянской молодежи и педагогов.',
+    storyParagraph2: 'Запущенная в ноябре 2024 года, наша инициатива признает, что быстро развивающийся технологический ландшафт Армении требует грамотности в области ИИ. Мы не просто обучаем технологиям — мы способствуем человеко-ориентированному, этичному подходу к ИИ, который позиционирует Армению как регионального лидера в ответственных инновациях.',
+    storyParagraph3: 'Наша приверженность распространяется за пределы городских центров, чтобы охватить каждый регион Армении, обеспечивая, чтобы география не определяла доступ к мировому образованию в области ИИ. Мы верим, что будущее Армении зависит от расширения возможностей ее людей с навыками и знаниями для процветания в мире, управляемом ИИ.',
+    
+    // Mission and Vision
+    missionText: 'Демократизировать образование ИИ в Армении, расширяя возможности молодежи (15-29) и учителей во всех регионах с помощью основных навыков ИИ, удовлетворяя потребности рабочей силы и способствуя этичным инновациям.',
+    visionText: 'Воспитать новое поколение агентов изменений ИИ в Армении, способствуя разнообразию, этичным инновациям и вкладу в цифровую трансформацию нации.',
+    
+    // About Goals
+    goals: 'Наши цели',
+    skillDevelopment: 'Развитие навыков',
+    skillDevelopmentDesc: 'Обеспечить молодежь и учителей навыками ИИ будущего для удовлетворения потребностей рабочей силы в секторе ИКТ/высоких технологий.',
+    educatorEmpowerment: 'Расширение возможностей педагогов',
+    educatorEmpowermentDesc: 'Позволить учителям интегрировать инструменты ИИ в свою педагогику для повышения эффективности класса и современных подходов к преподаванию.',
+    innovationEcosystem: 'Инновационная экосистема',
+    innovationEcosystemDesc: 'Способствовать динамичной, инклюзивной инновационной экосистеме ИИ во всех армянских регионах.',
+    industryBridge: 'Мост с индустрией',
+    industryBridgeDesc: 'Преодолеть разрыв между академическими знаниями и потребностями индустрии для практических, применимых навыков.',
+    regionalLeadership: 'Региональное лидерство',
+    regionalLeadershipDesc: 'Способствовать репутации Армении как регионального технологического лидера через превосходство в образовании ИИ.',
+    
+    // About Values
+    values: 'Наши ценности',
+    inclusivity: 'Инклюзивность',
+    inclusivityDesc: 'Обеспечение того, чтобы образование ИИ охватывало каждый регион и сообщество в Армении.',
+    innovation: 'Инновации',
+    innovationDesc: 'Способствование творческому решению проблем и передовым приложениям ИИ.',
+    empowerment: 'Расширение возможностей',
+    empowermentDesc: 'Предоставление людям инструментов и знаний для формирования их будущего.',
+    collaboration: 'Сотрудничество',
+    collaborationDesc: 'Построение прочных партнерств между образованием, индустрией и правительством.',
+    
+    // Programs Page
+    programsPageTitle: 'Наши программы',
+    programsPageSubtitle: 'Удовлетворение различных интересов и уровней навыков',
+    teacherProgramTitle: 'ИИ для учителей',
+    teacherProgramSubtitle: 'Инструменты и методы ИИ для современного образования',
+    teacherProgramDesc: 'Трансформируйте свой подход к преподаванию с помощью передовых инструментов ИИ, разработанных для современной педагогики.',
+    youthProgramTitle: 'ИИ для молодежи',
+    youthProgramSubtitle: 'Навыки ИИ будущего для следующего поколения',
+    youthProgramDesc: 'Комплексная программа образования ИИ, разработанная для подготовки молодых умов к цифровому будущему.',
+    
+    // Programs Hero Section
+    programsHeroTitle: 'Наши программы',
+    programsHeroSubtitle: 'Выберите программу, которая соответствует вашим целям, и начните свое путешествие в мир ИИ сегодня.',
+    
+    // Teacher Program Detailed
+    teacherProgramDescription: 'Трансформируйте свой подход к преподаванию с помощью передовых инструментов ИИ, разработанных для современной педагогики.',
+    
+    // Teacher Program Modules
+    teacherModule1: 'Планирование уроков с использованием ИИ',
+    teacherModule2: 'Автоматизированное создание тестов и оценок',
+    teacherModule3: 'ИИ для управления классом и эффективности',
+    teacherModule4: 'Этический ИИ в образовании',
+    teacherModule5: 'Анализ прогресса студентов на основе данных',
+    teacherModule6: 'Инструменты ИИ для создания контента',
+    teacherModule7: 'Персонализированное обучение с ИИ',
+    teacherModule8: 'Системы оценивания с поддержкой ИИ',
+    
+    // Teacher Program Benefits
+    teacherBenefit1: 'Улучшенное профессиональное развитие',
+    teacherBenefit2: 'Повышенная эффективность в классе',
+    teacherBenefit3: 'Современные педагогические подходы',
+    teacherBenefit4: 'Лидерство в интеграции технологий',
+    teacherBenefit5: 'Улучшенная вовлеченность студентов',
+    teacherBenefit6: 'Принятие решений в обучении на основе данных',
+    
+    // Teacher Program Eligibility
+    teacherEligibility1: 'Возраст до 29 лет',
+    teacherEligibility2: 'Действующий или будущий учитель в Армении',
+    teacherEligibility3: 'Базовые компьютерные навыки',
+    teacherEligibility4: 'Обязательство завершить программу',
+    teacherEligibility5: 'Интерес к образовательным технологиям',
+    
+    // Teacher Program Structure
+    teacherDuration: '8-недельная интенсивная программа',
+    teacherFormat: 'Смешанное обучение: онлайн-модули + живые виртуальные семинары',
+    teacherSchedule: 'Вечерние и выходные дни для совмещения с расписанием преподавания',
+    teacherCertification: 'Сертификат преподавателя AI4ALL Armenia',
+    
+    // Youth Program Modules
+    youthModule1: 'Введение в ИИ и машинное обучение',
+    youthModule2: 'Python для науки о данных',
+    youthModule3: 'Основы глубокого обучения',
+    youthModule4: 'Основы обработки естественного языка',
+    youthModule5: 'Основы компьютерного зрения',
+    youthModule6: 'Этический ИИ и социальное воздействие',
+    youthModule7: 'Практическая разработка проектов',
+    youthModule8: 'ИИ в промышленных приложениях',
+    
+    // Youth Program Benefits
+    youthBenefit1: 'Высоко востребованные технические навыки',
+    youthBenefit2: 'Улучшенные способности критического мышления',
+    youthBenefit3: 'Развитие навыков решения проблем',
+    youthBenefit4: 'Карьерные пути в различных областях ИИ',
+    youthBenefit5: 'Доступ к профессиональным сетям',
+    youthBenefit6: 'Портфолио реальных проектов',
+    
+    // Youth Program Eligibility
+    youthEligibility1: 'Возраст 15-29 лет',
+    youthEligibility2: 'Проживание в Армении',
+    youthEligibility3: 'Диплом средней школы или эквивалент',
+    youthEligibility4: 'Базовые знания программирования (предпочтительно)',
+    youthEligibility5: 'Обязательство завершить программу',
+    
+    // Youth Program Structure
+    youthDuration: '12-недельный базовый курс + 6-месячный продвинутый трек',
+    youthFormat: 'Интерактивные лекции, лаборатории программирования, групповые проекты',
+    youthSchedule: 'Сессии выходного дня и онлайн-модули',
+    youthCertification: 'Сертификат молодежи AI4ALL Armenia',
+    
+    // Programs Page Section Titles
+    learnMoreTeachers: 'Узнать больше о программе для учителей',
+    learnMoreYouth: 'Узнать больше о программе для молодежи',
+    applyNowTeachers: 'Подать заявку сейчас - Учителя',
+    applyNowYouth: 'Подать заявку сейчас - Молодежь',
+    frequentlyAskedQuestions: 'Часто задаваемые вопросы',
+    
+    // FAQ Questions and Answers
+    faqQuestion1: 'Каковы технические требования для программ?',
+    faqAnswer1: 'Вам нужен компьютер с доступом в интернет, базовое программное обеспечение, которое мы поможем установить, и энтузиазм к обучению. Мы предоставляем все необходимые учебные материалы и лицензии на программное обеспечение.',
+    faqQuestion2: 'Сколько времени требуется?',
+    faqAnswer2: 'Программа для учителей: 6-8 часов в неделю. Программа для молодежи: 10-12 часов в неделю. Мы понимаем, что у участников есть другие обязательства, поэтому расписание гибкое.',
+    faqQuestion3: 'Есть ли плата за программы?',
+    faqAnswer3: 'Нет, все программы AI4ALL Armenia полностью бесплатны благодаря поддержке EIF. Это включает все материалы, программное обеспечение и сертификацию.',
+    faqQuestion4: 'Какой сертификат я получу по завершении?',
+    faqAnswer4: 'Выпускники получают сертификат AI4ALL Armenia, признанный местными технологическими компаниями и образовательными учреждениями. Мы также предоставляем сертификаты LinkedIn и поддержку развития портфолио.',
+    faqQuestion5: 'Могу ли я участвовать, если живу за пределами Еревана?',
+    faqAnswer5: 'Абсолютно! Наши программы разработаны для охвата всех регионов Армении. Большая часть контента предоставляется онлайн, с некоторыми региональными семинарами и встречами.',
+    faqQuestion6: 'Какие возможности трудоустройства доступны после завершения?',
+    faqAnswer6: 'Выпускники находят возможности в разработке ИИ, анализе данных, образовательных технологиях и многом другом. Мы предоставляем карьерное руководство и связи с нашими компаниями-партнерами.',
+    
+    // Contact Section
+    contactTitle: 'Свяжитесь с нами',
+    contactSubtitle: 'Есть вопросы о наших программах? Мы здесь, чтобы помочь!',
+    name: 'Имя',
+    email: 'Электронная почта',
+    subject: 'Тема',
+    inquiryType: 'Тип запроса',
+    message: 'Сообщение',
+    sendMessage: 'Отправить сообщение',
+    followUs: 'Подписывайтесь на нас',
+    followUsDescription: 'Оставайтесь на связи с AI4ALL Armenia в социальных сетях для получения последних обновлений, историй успеха и ярких моментов сообщества.',
+    ourLocation: 'Наше местоположение',
+    interactiveMapSoon: 'Интерактивная карта скоро',
+    quickAnswers: 'Быстрые ответы',
+    partnershipOpportunities: 'Возможности партнерства',
+    partnershipDescription: 'Мы всегда ищем организации, которые разделяют наше видение демократизации образования в области ИИ в Армении. Станьте нашим партнером, чтобы расширить наше влияние.',
+    mediaInquiries: 'Медиа-запросы',
+    mediaDescription: 'Представители СМИ могут связаться с нами для интервью, пресс-релизов и доступа к информации о программах и историям участников.',
+    
+    // Teacher Program Page
+    teachersTrained: 'Обученных учителей',
+    programModules: 'Модулей программы',
+    satisfactionRate: 'Уровень удовлетворенности',
+    schoolsImpacted: 'Затронутых школ',
+    whyChooseAI4ALL: 'Почему выбрать AI4ALL Armenia для учителей?',
+    whyChooseDescription: 'Наши программы для учителей разработаны педагогами для педагогов, с практическими применениями, которые вы можете внедрить немедленно.',
+    enhancedTeachingMethods: 'Улучшенные методы преподавания',
+    enhancedTeachingDescription: 'Изучите инновационные методы преподавания на основе ИИ, которые улучшают вовлеченность студентов и результаты обучения.',
+    increasedEfficiency: 'Повышенная эффективность',
+    increasedEfficiencyDescription: 'Автоматизируйте рутинные задачи, такие как оценивание и обратная связь, освобождая время для значимого взаимодействия со студентами.',
+    personalizedLearning: 'Персонализированное обучение',
+    personalizedLearningDescription: 'Создавайте индивидуальные учебные опыты, которые адаптируются к темпу и стилю обучения каждого студента.',
+    futureReadySkills: 'Навыки будущего',
+    futureReadySkillsDescription: 'Подготовьте студентов к миру, управляемому ИИ, интегрируя передовые технологии в ваш учебный план.',
+    availablePrograms: 'Доступные программы',
+    allLevels: 'Все уровни',
+    allDurations: 'Все длительности',
+    readyToTransform: 'Готовы трансформировать ваше преподавание?',
+    readyToTransformDescription: 'Присоединяйтесь к сотням армянских педагогов, которые уже используют ИИ для повышения эффективности преподавания и вовлеченности студентов. Начните свой путь сегодня.',
+    beginner: 'Начинающий',
+    intermediate: 'Средний',
+    advanced: 'Продвинутый',
+    participants: 'участников',
+    certified: 'Сертифицированный',
+    viewDetails: 'Посмотреть детали',
+    hideDetails: 'Скрыть детали',
+    apply: 'Подать заявку',
+    learningObjectives: 'Цели обучения',
+    requirements: 'Требования',
+    curriculum: 'Учебная программа',
+    upcomingSessions: 'Предстоящие сессии',
+    spotsLeft: 'мест осталось',
+    teacherSuccessStories: 'Истории успеха учителей',
+    teacherSuccessDescription: 'Услышьте от педагогов, которые трансформировали свое преподавание с помощью инструментов и методов ИИ.',
+    
+    // Contact Page FAQs
+    faqHow: 'Как я могу подать заявку на программы AI4ALL Armenia?',
+    faqHowAnswer: 'Вы можете подать заявку через наш онлайн-портал заявок. Посетите нашу страницу Программы, чтобы узнать больше о требованиях и сроках подачи заявок.',
+    faqFees: 'Есть ли плата за программы?',
+    faqFeesAnswer: 'Нет, все программы AI4ALL Armenia полностью бесплатны благодаря поддержке EIF.',
+    faqOutside: 'Могу ли я участвовать, если живу вне Еревана?',
+    faqOutsideAnswer: 'Абсолютно! Наши программы разработаны для охвата всех регионов Армении с онлайн-доставкой и региональными семинарами.',
+    faqTech: 'Какие технические требования мне нужны?',
+    faqTechAnswer: 'Вам нужен компьютер с доступом в интернет и базовое программное обеспечение, которое мы поможем установить.',
+    
+    // Contact Form
+    yourFullName: 'Ваше полное имя',
+    yourEmail: 'ваш@email.com',
+    briefSubject: 'Краткая тема',
+    tellUsMore: 'Расскажите нам больше о вашем запросе...',
+    sending: 'Отправка...',
+    thankYouMessage: 'Спасибо за ваше сообщение! Мы скоро свяжемся с вами.',
+    
+    // Inquiry Types
+    generalInquiry: 'Общий запрос',
+    programInformation: 'Информация о программе',
+    applicationSupport: 'Поддержка заявки',
+    partnershipInquiries: 'Возможности партнерства',
+    technicalSupport: 'Техническая поддержка',
+    
+    // Partnership Section
+    corporatePartnerships: 'Корпоративные партнерства и спонсорство',
+    educationalCollaborations: 'Сотрудничество с образовательными учреждениями',
+    technologyProviders: 'Партнерство с технологическими провайдерами',
+    mentorshipOpportunities: 'Возможности наставничества и выступлений',
+    
+    // Media Contact
+    mediaContact: 'Медиа контакт',
+    responseTime: 'Время ответа: В течение 2 часов в рабочие часы',
+    
+    // Contact Info Cards
+    contactEmail: 'Электронная почта',
+    emailDescription: 'Отправьте нам электронное письмо, и мы ответим в течение 24 часов',
+    contactPhone: 'Телефон',
+    phoneDescription: 'Звоните нам в рабочие часы',
+    contactOffice: 'Офис',
+    officeAddress: 'ул. Багреванд 21/1, Ереван, Армения 0062',
+    contactHours: 'Часы работы',
+    businessHours: 'Пн - Пт: 9:00 - 18:00',
+    armeniaTime: 'Время Армении (GMT+4)',
+    
+    // News Page
+    newsEventsTitle: 'Новости и события',
+    newsEventsSubtitle: 'Будьте в курсе последних разработок, историй и возможностей от AI4ALL Armenia.',
+    featuredStories: 'Избранные истории',
+    featuredStoriesDescription: 'Освещение наиболее важных историй нашей инициативы по образованию в области ИИ.',
+    allUpdates: 'Все обновления',
+    allUpdatesDescription: 'Просмотрите все новости, события и объявления от AI4ALL Armenia.',
+    filterAll: 'Все',
+    filterNews: 'Новости',
+    filterEvents: 'События',
+    filterAnnouncements: 'Объявления',
+    register: 'Зарегистрироваться',
+    stayInTheLoop: 'Оставайтесь в курсе',
+    newsletterDescription: 'Подпишитесь на нашу рассылку, чтобы получать последние обновления о программах, событиях и историях успеха.',
+    enterEmail: 'Введите ваш email',
+    subscribe: 'Подписаться',
+    
+    // Article Page
+    backToNews: 'Назад к новостям',
+    share: 'Поделиться',
+    shareThisArticle: 'Поделиться этой статьей',
+    linkCopied: 'Ссылка скопирована!',
+    copyLink: 'Копировать ссылку',
+    tags: 'Теги:',
+    relatedArticles: 'Похожие статьи',
+    articleNotFound: 'Статья не найдена',
+    articleNotFoundDescription: 'Статья, которую вы ищете, не существует.',
     
     // Footer
-    poweredBy: 'Фонд предпринимательского инкубатора',
-    scrollToExplore: 'Прокрутите для изучения',
+    poweredBy: 'При поддержке Фонда предпринимательского инкубатора',
+    allRightsReserved: 'Все права защищены',
+    footerDescription: 'Демократизация образования в области ИИ в Армении путем расширения возможностей молодежи (15-29) и учителей во всех регионах с помощью основных навыков ИИ. Инициатива Фонда предпринимательского инкубатора (EIF).',
+    footerPrograms: 'Программы',
+    footerResources: 'Ресурсы',
+    footerSupport: 'Поддержка',
+    footerOurStory: 'Наша история',
+    footerOurGoals: 'Наши цели',
+    footerOurValues: 'Наши ценности',
+    footerPartnership: 'Партнерство',
+    footerSuccessStories: 'Истории успеха',
+    footerNewsEvents: 'Новости и события',
+    footerFaq: 'ЧЗВ',
+    footerContactUs: 'Связаться с нами',
+    footerMediaInquiries: 'Медиа запросы',
+    footerPartnershipOpportunities: 'Возможности партнерства',
+    
+    // EIF Partnership Section
+    eifPartnershipTitle: 'Партнерство с EIF',
+    eifPartnershipDescription: 'AI4ALL Armenia реализуется благодаря стремлению Фонда «Инкубатор предприятий» содействовать технологическому будущему Армении.',
+    armeniaTechInitiativeTitle: 'Инициатива по технологическому развитию Армении',
+    armeniaTechInitiativeDescription: 'Через комплексный подход EIF эта инициатива нацелена на обучение тысяч молодых людей в возрасте 15-29 лет востребованным навыкам в ключевых секторах:',
+    ictHighTech: 'ИКТ/Высокие технологии: включая ИИ, разработку программного обеспечения и цифровые навыки',
+    agriculture: 'Сельское хозяйство: современные методы ведения сельского хозяйства и агротехнологические инновации',
+    hospitality: 'Гостеприимство: навыки в сфере туризма и услуг',
+    ourRoleTitle: 'Наша роль в экосистеме',
+    ourRoleDescription1: 'AI4ALL Armenia непосредственно отвечает на растущий спрос на грамотность в области ИИ в рамках более широкой инициативы по развитию рабочей силы с фокусом на сектор ИКТ/высоких технологий.',
+    ourRoleDescription2: 'Сотрудничая с глобальной организацией AI4ALL, мы привносим в Армению методики обучения ИИ мирового класса, при этом адаптируя их к местным потребностям и контексту.',
+    ourRoleDescription3: 'Это стратегическое согласование гарантирует, что наши усилия в области образования по ИИ напрямую способствуют целям экономического развития Армении и ее региональной конкурентоспособности в технологическом секторе.',
+    
+    // Program Comparison Table
+    chooseYourPath: 'Выберите свой путь',
+    programComparisonDescription: 'Обе программы разработаны для предоставления комплексного образования в области ИИ, адаптированного к вашим конкретным потребностям и карьерным целям.',
+    feature: 'Характеристика',
+    duration: 'Длительность',
+    ageRange: 'Возраст',
+    schedule: 'График',
+    focus: 'Фокус',
+    prerequisites: 'Требования',
+    teachingBackground: 'Педагогический опыт',
+    technicalAISkills: 'Технические навыки ИИ',
+    educationalAITools: 'Образовательные инструменты ИИ',
+    eveningsWeekends: 'Вечера и выходные',
+    weekendsOnline: 'Выходные и онлайн',
+    highSchoolDiploma: 'Аттестат о среднем образовании',
+    
+    // Call-to-Action Section
+    readyToStart: 'Готовы начать свой путь в мире ИИ?',
+    joinHundreds: 'Присоединяйтесь к сотням армянских молодых людей и учителей, которые уже трансформируют свое будущее с помощью ИИ.',
+    haveQuestions: 'Есть вопросы?',
+    
+    // Page-specific content placeholders
+    newsPageTitle: 'Новости и обновления',
+    newsPageDescription: 'Будьте в курсе последних новостей AI4ALL Armenia',
+    contactPageTitle: 'Свяжитесь с нами',
+    contactPageDescription: 'Свяжитесь с нашей командой',
+    teachersPageTitle: 'Программа ИИ для преподавателей',
+    teachersPageDescription: 'Комплексное образование в области ИИ для педагогов',
+    youthPageTitle: 'Программа ИИ для молодежи', 
+    youthPageDescription: 'Навыки ИИ будущего для молодых лидеров',
+    applyPageTitle: 'Подать заявку',
+    applyPageDescription: 'Начните подачу заявки на программы AI4ALL Armenia',
+    impactPageTitle: 'Наше влияние',
+    impactPageDescription: 'Узнайте, как AI4ALL Armenia меняет жизни и сообщества',
+    
+    // Common
+    loading: 'Загрузка...',
+    error: 'Ошибка',
+    backToHome: 'Вернуться на главную',
+    pageNotFound: 'Страница не найдена',
+    comingSoon: 'Скоро',
+    
+    // Registration Pages
+    registrationSuccess: 'Регистрация успешна!',
+    registrationSuccessMessage: 'Спасибо за регистрацию на семинар по ИИ для армянских учителей. Мы свяжемся с вами в ближайшее время с подробностями.',
+    backToEvents: 'Вернуться к мероприятиям',
+    workshopDetails: 'Детали семинара',
+    workshopDate: 'Дата',
+    workshopTime: 'Время',
+    workshopLocation: 'Место',
+    workshopParticipants: 'Участники',
+    registrationForm: 'Форма регистрации',
+    regFirstName: 'Имя',
+    regLastName: 'Фамилия',
+    regEmail: 'Электронная почта',
+    regPhone: 'Телефон',
+    regSchool: 'Школа/Учреждение',
+    teachingExperience: 'Опыт преподавания',
+    subjectsTeach: 'Преподаваемые предметы',
+    aiExperience: 'Уровень опыта с ИИ',
+    learningExpectations: 'Что вы надеетесь изучить?',
+    heardAbout: 'Как вы узнали о нас?',
+    registerNow: 'Зарегистрироваться сейчас',
+    regSubmitting: 'Отправляется...',
+    regRequired: 'Обязательно',
+    experienceYears: 'лет',
+    upTo50Teachers: 'До 50 учителей',
+    eifTechCenter: 'Технологический центр EIF, Ереван',
+    august10: '10 августа 2025',
+    time10to16: '10:00 - 16:00',
+    aiExperienceNone: 'Нет опыта',
+    aiExperienceBasic: 'Базовый (слышал об ИИ)',
+    aiExperienceIntermediate: 'Средний (использовал некоторые инструменты)',
+    aiExperienceAdvanced: 'Продвинутый (регулярный пользователь)',
   }
 }
 

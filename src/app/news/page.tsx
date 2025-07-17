@@ -5,15 +5,17 @@ import { motion } from 'framer-motion'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, MapPin, Clock, Tag, ArrowRight, Filter } from 'lucide-react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 const NewsEventsPage = () => {
+  const { t } = useLanguage()
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filters = [
-    { id: 'all', label: 'All', count: 15 },
-    { id: 'news', label: 'News', count: 10 },
-    { id: 'events', label: 'Events', count: 5 },
-    { id: 'announcements', label: 'Announcements', count: 0 },
+    { id: 'all', label: t('filterAll'), count: 13 },
+    { id: 'news', label: t('filterNews'), count: 8 },
+    { id: 'events', label: t('filterEvents'), count: 5 },
+    { id: 'announcements', label: t('filterAnnouncements'), count: 0 },
   ]
 
   const newsEvents = [
@@ -78,7 +80,7 @@ const NewsEventsPage = () => {
       title: 'AI4ALL Armenia: Empowering Everyone with Artificial Intelligence',
       date: '2025-07-15',
       category: 'Program Overview',
-      excerpt: 'Ձեռնարկությունների ինկուբատոր հիմնադրամի AI4ALL նախաձեռնությունը նպատակ ունի զինել մարդկանց AI գիտելիքներով և հմտություններով արդյունավետ կիրառման համար:',
+      excerpt: 'Enterprise Incubator Foundation\'s AI4ALL initiative aims to equip people with AI knowledge and skills for effective application.',
       image: '/news/AI4ALL Armenia Launches Nationwide Initiative.png',
       author: 'EIF Armenia',
       featured: true,
@@ -99,12 +101,12 @@ const NewsEventsPage = () => {
     {
       id: 11,
       type: 'event',
-      title: 'Արհեստական բանականության աշխատարան հայ մանկավարժների համար',
+      title: 'AI Workshop for Armenian Teachers',
       date: '2025-08-10',
       time: '10:00 - 16:00',
       location: 'EIF Technology Center, Yerevan',
       category: 'Workshop',
-      excerpt: 'Մանկավարժների հատուկ աշխատարան՝ AI գործիքների ինտեգրման և դասարանում արդյունավետ կիրառման մասին: Հայերեն դասընթաց փորձառու մասնագետների հետ:',
+      excerpt: 'Special workshop for teachers on AI tool integration and effective classroom application. Armenian-language course with experienced professionals.',
       image: '/news/AI for Teachers Info Session.png',
       registrationLink: '/register/teachers-armenian-workshop',
       featured: true,
@@ -194,28 +196,6 @@ const NewsEventsPage = () => {
       registrationLink: '/register/icbai',
       featured: false,
     },
-    {
-      id: 14,
-      type: 'news',
-      title: 'Ուսուցիչները պատրաստ են թվային ապագայի համար',
-      date: '2024-06-23',
-      category: 'Կրթություն',
-      excerpt: 'AI4ALL Armenia-ի ծրագրի շրջանակում 500-ից ավելի ուսուցիչ ստացավ արհեստական բանականության գիտելիքներ:',
-      image: '/news/AI for Teachers Info Session.png',
-      author: 'Մարիաննա Դանիելյան',
-      featured: false,
-    },
-    {
-      id: 15,
-      type: 'news',
-      title: 'ԱԲ-ի ինտեգրումը հայկական կրթական համակարգում',
-      date: '2024-06-07',
-      category: 'Տեխնոլոգիա',
-      excerpt: 'Ձեռնարկությունների ինկուբատոր հիմնադրամի Վանաձորի տեխնոլոգիական կենտրոնը հաջողությամբ իրականացնում է մանկավարժների համար նախատեսված ԱԲ կրթական ծրագիրը:',
-      image: '/news/AI Workshop - Vanadzor Tech Center.png',
-      author: 'Եղիշե Սաֆարյան',
-      featured: false,
-    },
   ]
 
   const upcomingEvents = newsEvents
@@ -255,10 +235,10 @@ const NewsEventsPage = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">
-              News & Events
+              {t('newsEventsTitle')}
             </h1>
             <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto">
-              Stay updated with the latest developments, stories, and opportunities from AI4ALL Armenia.
+              {t('newsEventsSubtitle')}
             </p>
           </motion.div>
         </div>
@@ -274,10 +254,10 @@ const NewsEventsPage = () => {
             className="mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
-              Featured Stories
+              {t('featuredStories')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto text-center">
-              Highlighting the most impactful stories from our AI education initiative.
+              {t('featuredStoriesDescription')}
             </p>
           </motion.div>
 
@@ -323,7 +303,7 @@ const NewsEventsPage = () => {
                       href={`/news/${item.id}`}
                       className="bg-primary-600 hover:bg-primary-700 text-white px-6 py-2 rounded-md font-medium transition-colors inline-flex items-center flex-shrink-0"
                     >
-                      Read More
+                      {t('readMore')}
                       <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                   </div>
@@ -346,10 +326,10 @@ const NewsEventsPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              All Updates
+              {t('allUpdates')}
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Browse all news, events, and announcements from AI4ALL Armenia.
+              {t('allUpdatesDescription')}
             </p>
           </motion.div>
 
@@ -439,7 +419,7 @@ const NewsEventsPage = () => {
                       href={item.registrationLink || `/news/${item.id}`}
                       className="bg-primary-600 hover:bg-primary-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors inline-flex items-center flex-shrink-0"
                     >
-                      {item.type === 'event' ? 'Register' : 'Read More'}
+                      {item.type === 'event' ? t('register') : t('readMore')}
                       <ArrowRight className="w-4 h-4 ml-1" />
                     </Link>
                   </div>
@@ -459,20 +439,20 @@ const NewsEventsPage = () => {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Stay In The Loop
+              {t('stayInTheLoop')}
             </h2>
             <p className="text-xl text-blue-100 mb-8">
-              Subscribe to our newsletter for the latest updates on programs, events, and success stories.
+              {t('newsletterDescription')}
             </p>
             <div className="max-w-md mx-auto">
               <div className="flex">
                 <input
                   type="email"
-                  placeholder="Enter your email"
+                  placeholder={t('enterEmail')}
                   className="flex-1 px-4 py-3 rounded-l-md text-gray-900 focus:outline-none focus:ring-2 focus:ring-accent-500"
                 />
                 <button className="bg-accent-500 text-gray-900 px-6 py-3 rounded-r-md font-semibold hover:bg-accent-400 transition-colors">
-                  Subscribe
+                  {t('subscribe')}
                 </button>
               </div>
             </div>
