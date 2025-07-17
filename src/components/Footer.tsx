@@ -54,17 +54,15 @@ const Footer = () => {
               <p className="text-gray-300 mb-4">
                 Democratizing AI education in Armenia by empowering youth (15-29) and teachers 
                 across all regions with essential AI skills. An initiative by the Enterprise 
-                Incubator Foundation (EIF) and USAID.
+                Incubator Foundation (EIF).
               </p>
               
               {/* Partner Logos */}
               <div className="flex items-center space-x-6 mb-6">
                 <div className="text-sm text-gray-400">
-                  <p className="font-medium">In partnership with:</p>
+                  <p className="font-medium">Powered by:</p>
                   <div className="flex items-center space-x-4 mt-2">
                     <span className="text-white">EIF</span>
-                    <span className="text-gray-500">•</span>
-                    <span className="text-white">USAID</span>
                     <span className="text-gray-500">•</span>
                     <span className="text-white">AI4ALL</span>
                   </div>
@@ -174,7 +172,7 @@ const Footer = () => {
                 © {currentYear} AI4ALL Armenia. All rights reserved.
               </p>
               <p className="text-gray-500 text-xs mt-1">
-                Powered by EIF and USAID
+                Powered by EIF
               </p>
             </div>
           </div>

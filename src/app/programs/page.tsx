@@ -109,7 +109,7 @@ const ProgramsPage = () => {
     },
     {
       question: 'Are there any fees for the programs?',
-      answer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF and USAID. This includes all materials, software, and certification.',
+      answer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF. This includes all materials, software, and certification.',
     },
     {
       question: 'What certification do I receive upon completion?',
@@ -153,13 +153,13 @@ const ProgramsPage = () => {
       {/* Programs Overview */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
             {/* AI for Teachers */}
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200"
+              className="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200 flex flex-col h-full"
             >
               <div className="bg-blue-600 text-white p-6">
                 <div className="flex items-center mb-4">
@@ -169,8 +169,8 @@ const ProgramsPage = () => {
                 <p className="text-xl text-blue-100 mb-4">{teacherProgram.subtitle}</p>
                 <p className="text-blue-100">{teacherProgram.description}</p>
               </div>
-              <div className="p-6">
-                <div className="space-y-6">
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="space-y-6 flex-1">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-3">Program Duration</h3>
                     <div className="flex items-center text-slate-700">
@@ -183,7 +183,7 @@ const ProgramsPage = () => {
                     <ul className="space-y-2">
                       {teacherProgram.benefits.slice(0, 3).map((benefit, index) => (
                         <li key={index} className="flex items-start">
-                          <CheckCircle className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <CheckCircle className="w-4 h-4 text-blue-500 mr-2 mt-0.5 flex-shrink-0" />
                           <span className="text-slate-700">{benefit}</span>
                         </li>
                       ))}
@@ -212,7 +212,7 @@ const ProgramsPage = () => {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200"
+              className="bg-white rounded-lg shadow-lg overflow-hidden border border-slate-200 flex flex-col h-full"
             >
               <div className="bg-emerald-600 text-white p-6">
                 <div className="flex items-center mb-4">
@@ -222,8 +222,8 @@ const ProgramsPage = () => {
                 <p className="text-xl text-emerald-100 mb-4">{youthProgram.subtitle}</p>
                 <p className="text-emerald-100">{youthProgram.description}</p>
               </div>
-              <div className="p-6">
-                <div className="space-y-6">
+              <div className="p-6 flex-1 flex flex-col">
+                <div className="space-y-6 flex-1">
                   <div>
                     <h3 className="text-lg font-semibold text-slate-900 mb-3">Program Duration</h3>
                     <div className="flex items-center text-slate-700">

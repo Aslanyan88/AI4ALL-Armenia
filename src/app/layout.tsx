@@ -8,8 +8,8 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'AI4ALL Armenia - Empowering Future with AI Education',
-  description: 'AI4ALL Armenia democratizes AI education by empowering youth (15-29) and teachers across Armenia with essential AI skills. An initiative by EIF and USAID.',
-  keywords: 'AI education, Armenia, youth empowerment, teacher training, artificial intelligence, EIF, USAID',
+  description: 'AI4ALL Armenia democratizes AI education by empowering youth (15-29) and teachers across Armenia with essential AI skills. An initiative by EIF.',
+  keywords: 'AI education, Armenia, youth empowerment, teacher training, artificial intelligence, EIF',
   icons: {
     icon: '/favicon.ico',
     shortcut: '/favicon.ico',

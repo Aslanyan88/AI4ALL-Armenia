@@ -95,9 +95,9 @@ const AboutPage = () => {
               </h2>
               <p className="text-lg text-gray-600 mb-6">
                 AI4ALL Armenia was born from a vision to democratize AI education across Armenia. 
-                Through the strategic collaboration between the Enterprise Incubator Foundation (EIF), 
-                USAID&apos;s &quot;Armenia Workforce Development Activity,&quot; and the global AI4ALL movement, 
-                we&apos;re creating unprecedented opportunities for Armenian youth and educators.
+                Through the strategic collaboration between the Enterprise Incubator Foundation (EIF) 
+                and the global AI4ALL movement, we&apos;re creating unprecedented opportunities for 
+                Armenian youth and educators.
               </p>
               <p className="text-lg text-gray-600 mb-6">
                 Launched in November 2024, our initiative recognizes that Armenia&apos;s rapidly evolving 
@@ -225,10 +225,10 @@ const AboutPage = () => {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              The EIF & USAID Partnership
+              The EIF Partnership
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              AI4ALL Armenia is a key component of the broader Armenia Workforce Development Activity.
+              AI4ALL Armenia is powered by the Enterprise Incubator Foundation&apos;s commitment to advancing Armenia&apos;s technological future.
             </p>
           </motion.div>
 
@@ -240,11 +240,11 @@ const AboutPage = () => {
               className="bg-white rounded-lg p-8 shadow-md"
             >
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
-                Armenia Workforce Development Activity
+                Armenia Tech Development Initiative
               </h3>
               <p className="text-gray-600 mb-4">
-                Launched in October 2021, this 5-year program by USAID and EIF aims to equip 
-                10,000 youth aged 15-29 with in-demand skills across three key sectors:
+                Through EIF&apos;s comprehensive approach, this initiative aims to equip 
+                thousands of youth aged 15-29 with in-demand skills across key sectors:
               </p>
               <ul className="space-y-3 text-gray-600">
                 <li className="flex items-start">
@@ -299,10 +299,6 @@ const AboutPage = () => {
               <div className="bg-primary-100 px-8 py-4 rounded-lg">
                 <span className="text-2xl font-bold text-primary-600">EIF</span>
                 <p className="text-sm text-gray-600">Enterprise Incubator Foundation</p>
-              </div>
-              <div className="bg-blue-100 px-8 py-4 rounded-lg">
-                <span className="text-2xl font-bold text-blue-600">USAID</span>
-                <p className="text-sm text-gray-600">United States Agency for International Development</p>
               </div>
               <div className="bg-green-100 px-8 py-4 rounded-lg">
                 <span className="text-2xl font-bold text-green-600">AI4ALL</span>

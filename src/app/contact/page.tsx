@@ -96,7 +96,7 @@ const ContactPage = () => {
     },
     {
       question: 'Are there any fees for the programs?',
-      answer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF and USAID.',
+      answer: 'No, all AI4ALL Armenia programs are completely free thanks to support from EIF.',
     },
     {
       question: 'Can I participate if I live outside Yerevan?',

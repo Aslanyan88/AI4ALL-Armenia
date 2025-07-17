@@ -10,10 +10,10 @@ const NewsEventsPage = () => {
   const [activeFilter, setActiveFilter] = useState('all')
 
   const filters = [
-    { id: 'all', label: 'All', count: 13 },
-    { id: 'news', label: 'News', count: 5 },
-    { id: 'events', label: 'Events', count: 4 },
-    { id: 'announcements', label: 'Announcements', count: 3 },
+    { id: 'all', label: 'All', count: 15 },
+    { id: 'news', label: 'News', count: 10 },
+    { id: 'events', label: 'Events', count: 5 },
+    { id: 'announcements', label: 'Announcements', count: 0 },
   ]
 
   const newsEvents = [
@@ -73,6 +73,17 @@ const NewsEventsPage = () => {
       featured: false,
     },
     {
+      id: 10,
+      type: 'news',
+      title: 'AI4ALL Armenia: Empowering Everyone with Artificial Intelligence',
+      date: '2025-07-15',
+      category: 'Program Overview',
+      excerpt: 'Ձեռնարկությունների ինկուբատոր հիմնադրամի AI4ALL նախաձեռնությունը նպատակ ունի զինել մարդկանց AI գիտելիքներով և հմտություններով արդյունավետ կիրառման համար:',
+      image: '/news/AI4ALL Armenia Launches Nationwide Initiative.png',
+      author: 'EIF Armenia',
+      featured: true,
+    },
+    {
       id: 6,
       type: 'event',
       title: 'AI for Teachers Info Session',
@@ -83,6 +94,19 @@ const NewsEventsPage = () => {
       excerpt: 'Join us for an interactive session to learn about our AI for Teachers program, featuring live demonstrations and Q&A with program graduates.',
       image: '/news/AI for Teachers Info Session.png',
       registrationLink: '/register/teachers-info',
+      featured: true,
+    },
+    {
+      id: 11,
+      type: 'event',
+      title: 'Արհեստական բանականության աշխատարան հայ մանկավարժների համար',
+      date: '2025-08-10',
+      time: '10:00 - 16:00',
+      location: 'EIF Technology Center, Yerevan',
+      category: 'Workshop',
+      excerpt: 'Մանկավարժների հատուկ աշխատարան՝ AI գործիքների ինտեգրման և դասարանում արդյունավետ կիրառման մասին: Հայերեն դասընթաց փորձառու մասնագետների հետ:',
+      image: '/news/AI for Teachers Info Session.png',
+      registrationLink: '/register/teachers-armenian-workshop',
       featured: true,
     },
     {
@@ -168,6 +192,28 @@ const NewsEventsPage = () => {
       excerpt: 'Annual conference exploring the intersection of AI and business, featuring keynotes from AI4ALL Armenia mentors and industry partners.',
       image: '/news/International Conference on Business and AI.png',
       registrationLink: '/register/icbai',
+      featured: false,
+    },
+    {
+      id: 14,
+      type: 'news',
+      title: 'Ուսուցիչները պատրաստ են թվային ապագայի համար',
+      date: '2024-06-23',
+      category: 'Կրթություն',
+      excerpt: 'AI4ALL Armenia-ի ծրագրի շրջանակում 500-ից ավելի ուսուցիչ ստացավ արհեստական բանականության գիտելիքներ:',
+      image: '/news/AI for Teachers Info Session.png',
+      author: 'Մարիաննա Դանիելյան',
+      featured: false,
+    },
+    {
+      id: 15,
+      type: 'news',
+      title: 'ԱԲ-ի ինտեգրումը հայկական կրթական համակարգում',
+      date: '2024-06-07',
+      category: 'Տեխնոլոգիա',
+      excerpt: 'Ձեռնարկությունների ինկուբատոր հիմնադրամի Վանաձորի տեխնոլոգիական կենտրոնը հաջողությամբ իրականացնում է մանկավարժների համար նախատեսված ԱԲ կրթական ծրագիրը:',
+      image: '/news/AI Workshop - Vanadzor Tech Center.png',
+      author: 'Եղիշե Սաֆարյան',
       featured: false,
     },
   ]
@@ -288,63 +334,7 @@ const NewsEventsPage = () => {
         </div>
       </section>
 
-      {/* Upcoming Events */}
-      <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Upcoming Events
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join us for workshops, info sessions, and networking opportunities.
-            </p>
-          </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {upcomingEvents.map((event, index) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
-              >
-                <div className="flex items-center mb-4">
-                  <Calendar className="w-5 h-5 text-primary-600 mr-2" />
-                  <span className="text-primary-600 font-semibold">{formatDate(event.date)}</span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{event.title}</h3>
-                <div className="space-y-2 mb-4">
-                  {event.time && (
-                    <div className="flex items-center text-gray-600 text-sm">
-                      <Clock className="w-4 h-4 mr-2" />
-                      <span>{event.time}</span>
-                    </div>
-                  )}
-                  <div className="flex items-center text-gray-600 text-sm">
-                    <MapPin className="w-4 h-4 mr-2" />
-                    <span>{event.location}</span>
-                  </div>
-                </div>
-                <p className="text-gray-700 text-sm mb-4">{event.excerpt}</p>
-                {event.registrationLink && (
-                  <Link
-                    href={event.registrationLink}
-                    className="inline-block bg-primary-600 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-700 transition-colors"
-                  >
-                    Register Now
-                  </Link>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* All News & Events */}
       <section className="py-20 bg-gray-50">
