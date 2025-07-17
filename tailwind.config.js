@@ -63,6 +63,7 @@ module.exports = {
         'fade-in': 'fadeIn 0.5s ease-in-out',
         'slide-up': 'slideUp 0.5s ease-out',
         'scale-in': 'scaleIn 0.3s ease-out',
+        'loading': 'loading 2s ease-in-out infinite',
       },
       keyframes: {
         fadeIn: {
@@ -76,6 +77,11 @@ module.exports = {
         scaleIn: {
           '0%': { transform: 'scale(0.95)', opacity: '0' },
           '100%': { transform: 'scale(1)', opacity: '1' },
+        },
+        loading: {
+          '0%': { width: '0%', marginLeft: '0%' },
+          '50%': { width: '75%', marginLeft: '12.5%' },
+          '100%': { width: '0%', marginLeft: '100%' },
         },
       },
     },

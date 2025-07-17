@@ -1,0 +1,31 @@
+{
+  "name": "AI4ALL Armenia",
+  "short_name": "AI4ALL",
+  "description": "AI4ALL Armenia democratizes AI education by empowering youth and teachers across Armenia with essential AI skills.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1e293b",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "any",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "/logo.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "categories": ["education", "technology"],
+  "lang": "en-US",
+  "scope": "/",
+  "prefer_related_applications": false
+}

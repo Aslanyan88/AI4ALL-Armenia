@@ -277,21 +277,21 @@ const HomePage = () => {
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 className="group"
               >
-                <div className="bg-gradient-to-br from-slate-50 to-blue-50 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-slate-200 group-hover:border-blue-300 min-h-[420px] flex flex-col">
+                <div className="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-700 dark:to-slate-600 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-slate-200 dark:border-slate-600 group-hover:border-blue-300 dark:group-hover:border-blue-500 min-h-[420px] flex flex-col">
                   <div className="flex items-center mb-6">
                     <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mr-4 ${
-                      index === 0 ? 'bg-gradient-to-r from-blue-600 to-blue-700' : 'bg-gradient-to-r from-emerald-600 to-emerald-700'
+                      index === 0 ? 'bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-blue-600' : 'bg-gradient-to-r from-emerald-600 to-emerald-700 dark:from-emerald-500 dark:to-emerald-600'
                     }`}>
                       <program.icon className="w-8 h-8 text-white" />
                     </div>
-                    <h3 className="text-2xl font-bold text-slate-900 leading-tight">{program.title}</h3>
+                    <h3 className="text-2xl font-bold text-slate-900 dark:text-white leading-tight transition-colors">{program.title}</h3>
                   </div>
-                  <p className="text-slate-700 mb-6 text-lg leading-relaxed min-h-[5rem] flex-grow">{program.description}</p>
+                  <p className="text-slate-700 dark:text-slate-300 mb-6 text-lg leading-relaxed min-h-[5rem] flex-grow transition-colors">{program.description}</p>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8">
                     {program.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-slate-700">
+                      <div key={idx} className="flex items-center text-slate-700 dark:text-slate-300 transition-colors">
                         <div className={`w-3 h-3 rounded-full mr-3 flex-shrink-0 ${
-                          index === 0 ? 'bg-blue-600' : 'bg-emerald-600'
+                          index === 0 ? 'bg-blue-600 dark:bg-blue-500' : 'bg-emerald-600 dark:bg-emerald-500'
                         }`}></div>
                         <span className="text-sm leading-tight">{feature}</span>
                       </div>
@@ -301,8 +301,8 @@ const HomePage = () => {
                     href={program.href}
                     className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold transition-all transform hover:scale-105 mt-auto ${
                       index === 0 
-                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 text-white hover:from-blue-700 hover:to-blue-800' 
-                        : 'bg-gradient-to-r from-emerald-600 to-emerald-700 text-white hover:from-emerald-700 hover:to-emerald-800'
+                        ? 'bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 dark:from-blue-500 dark:to-blue-600 dark:hover:from-blue-600 dark:hover:to-blue-700 text-white' 
+                        : 'bg-gradient-to-r from-emerald-600 to-emerald-700 hover:from-emerald-700 hover:to-emerald-800 dark:from-emerald-500 dark:to-emerald-600 dark:hover:from-emerald-600 dark:hover:to-emerald-700 text-white'
                     }`}
                   >
                     {program.cta}
@@ -339,34 +339,34 @@ const HomePage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
-                className="bg-white rounded-2xl p-8 shadow-xl border border-slate-200 hover:shadow-2xl transition-all duration-300 min-h-[360px] flex flex-col"
+                className="bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-xl border border-slate-200 dark:border-slate-700 hover:shadow-2xl transition-all duration-300 min-h-[360px] flex flex-col"
               >
                 <div className="flex items-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center mr-4">
+                  <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-500 dark:to-indigo-500 rounded-full flex items-center justify-center mr-4">
                     <span className="text-white font-bold text-xl">
                       {testimonial.name.charAt(0)}
                     </span>
                   </div>
                   <div>
-                    <div className="font-semibold text-slate-900 text-lg">{testimonial.name}</div>
-                    <div className="text-slate-600">{testimonial.role}</div>
-                    <div className="text-sm text-slate-500 flex items-center mt-1">
-                      <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                    <div className="font-semibold text-slate-900 dark:text-white text-lg transition-colors">{testimonial.name}</div>
+                    <div className="text-slate-600 dark:text-slate-400 transition-colors">{testimonial.role}</div>
+                    <div className="text-sm text-slate-500 dark:text-slate-400 flex items-center mt-1 transition-colors">
+                      <span className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full mr-2"></span>
                       {testimonial.region}
                     </div>
                   </div>
                 </div>
-                <blockquote className="text-slate-700 text-lg mb-6 italic leading-relaxed flex-grow">
+                <blockquote className="text-slate-700 dark:text-slate-300 text-lg mb-6 italic leading-relaxed flex-grow transition-colors">
                   &quot;{testimonial.quote}&quot;
                 </blockquote>
                 <div className="flex items-center justify-between mt-auto">
                   <div className="flex items-center">
-                    <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-indigo-500 rounded-full mr-3"></div>
-                    <span className="text-sm font-medium text-slate-500">{t('participantStory')}</span>
+                    <div className="w-1 h-8 bg-gradient-to-b from-blue-500 to-indigo-500 dark:from-blue-400 dark:to-indigo-400 rounded-full mr-3"></div>
+                    <span className="text-sm font-medium text-slate-500 dark:text-slate-400 transition-colors">{t('participantStory')}</span>
                   </div>
                   <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
-                      <div key={i} className="w-2 h-2 bg-orange-400 rounded-full"></div>
+                      <div key={i} className="w-2 h-2 bg-orange-400 dark:bg-orange-500 rounded-full"></div>
                     ))}
                   </div>
                 </div>
